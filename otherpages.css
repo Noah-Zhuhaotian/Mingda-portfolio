@@ -1,0 +1,207 @@
+header {
+    background-image: none;
+    height: 6rem;
+}
+
+
+.page-container {
+    position: relative;
+    width: 100%;
+    margin: 30px auto; 
+    height: auto;  
+}
+
+.page2-container {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 60px auto; 
+}
+ 
+.name-container {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 40px;
+    color: #11100E;
+}
+
+.self-intro-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.self-image {
+    width: 400px;
+    height: 400px;
+}
+
+.intro {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.2rem;
+}
+
+.title {
+    position: relative;
+    top: 80px;
+}
+
+.timeline-container {
+    position: relative;
+    top: 80px;
+}
+
+.timeline-image {
+    width: 100%;
+    height: auto;
+}
+
+.third-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 159px;
+    gap: 40px;
+}
+
+.skill-image {
+    width: 60px;
+    height: 60px;
+}
+
+.third-box-right {
+    display: flex;
+    flex-direction: column; /* 让子元素上下排列 */
+    gap: 80px; /* 控制 skill-container 和 moreintro-container 之间的间距 */
+}
+
+.skill-box {
+    display: flex;
+    justify-content: flex-start; /* 让图片在容器中居中 */
+    gap: 20px;
+
+}
+
+.skill-title, .title{
+    margin-bottom: 30px; /* 调整标题与内容的间距 */
+    font-size: 2.8rem;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.skill-container {
+    margin-bottom: 40px;
+}
+
+.moreintor {
+    font-size: 1.6rem;
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 2.2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .projects-page-container {
+        top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .page2-container{
+        margin: 50px auto;
+    }
+
+    .self-intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .self-image {
+        width: 320px;
+        height: 320px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .third-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .skill-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px, 10px;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .skill-box {
+        gap: 1rem;
+    }
+
+    .skill-image {
+        width: 4.5rem;
+        height: 4.5rem;
+
+    }
+
+    .skill-container {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+@media screen and (min-width: 922px) and (max-width: 1151px) {
+    .intro, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    }
+}
+
+@media screen and (min-width: 1153px) and (max-width: 1280px) {
+    .intro, .moreintor {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+}
+
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .intro, .moreintor {
+        font-size: 2.0rem;
+        line-height: 2.4rem;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1727px){
+    .intro, .moreintor {
+        font-size: 2.0rem;
+        line-height: 2.6rem;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .intro, .moreintor {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+}

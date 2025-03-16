@@ -28,7 +28,7 @@
     src: url('./fonts/albert-sans-v1-latin-200.woff2') format('woff2');
 }
 
-c{
+:root {
     --header-word-size: 16px
 }
 
@@ -428,7 +428,7 @@ header {
     font-family: 'Albert Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 3.6rem;
+    font-size: 4.2rem;
     line-height: 58px;
     color: #11100E;
 }
@@ -657,7 +657,7 @@ header {
 
 @media (min-width: 1750px){
     .banner-text-container {
-        top: 24%; 
+        top: 20vh; 
         max-width: 100%;
     }
 
@@ -729,12 +729,12 @@ header {
 
 @media screen and (min-width: 1281px) and (max-width: 1749px) {
     .banner-text-container {
-        top: 24%;
+        top: 26%;
     }
 
     .slogan {
-        font-size: 4rem; 
-        line-height: 5.8rem;
+        font-size: 4.5rem; 
+        line-height: 6rem;
         
     }
 
@@ -916,17 +916,13 @@ header {
         font-size: 2.8rem;
         line-height: 2.5rem;
     }
-
-    .page1-project-container {
-        margin-top: 40px;
-    }
     
     .selected {
-        top: 20px;
+        top: 10px;
     }
 
     .project{
-        font-size: 30px;
+        font-size: 38px;
     }
 
     .projects-class {
