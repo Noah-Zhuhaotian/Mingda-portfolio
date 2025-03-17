@@ -31,38 +31,3 @@ prevPageButton.addEventListener("click", () => {
     window.location.href = basePath + "/" + prevPage; // 跳转到上一页
 });
 
-// const pages = [
-//     "Repayment.html",   
-//     "Loan.html",       
-//     "DesignSystem.html",
-//     "SharePoint.html",  
-//     "Inside9.html",     
-//     "LoveStory.html" 
-// ];
-
-// // 获取当前页面路径（只保留 "/projects/xxx.html" 部分）
-// const currentPath = window.location.pathname.split("/").pop();
-
-// // 找到当前页面在数组中的索引
-// const currentIndex = pages.indexOf("/" + currentPath);
-
-// // 获取“下一页”和“上一页”的元素
-// const nextPageButton = document.getElementById("next-page");
-// const prevPageButton = document.getElementById("prev-page");
-
-// // 防止 `indexOf` 找不到时代码崩溃
-// if (currentIndex !== -1) {
-//     nextPageButton.addEventListener("click", () => {
-//         const nextPage = currentIndex === pages.length - 1 ? pages[0] : pages[currentIndex + 1];
-//         let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/");
-//         window.location.href = basePath + "/" + nextPage;
-//     });
-
-//     prevPageButton.addEventListener("click", () => {
-//         const prevPage = currentIndex === 0 ? pages[pages.length - 1] : pages[currentIndex - 1];
-//         let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/");
-//         window.location.href = basePath + "/" + prevPage;
-//     });
-// } else {
-//     console.error("The current pages dont' include:", currentPath);
-// }
