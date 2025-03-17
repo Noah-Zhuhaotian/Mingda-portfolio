@@ -135,8 +135,10 @@ document.querySelectorAll(".project-container").forEach((container, index) => {
             "/projects/LoveStory.html" 
         ];
 
+        let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/") + "/";
+
         if (urls[index]) {
-            window.location.href = urls[index];
+            window.location.href = basePath + urls[index]; // 自动跳转
         }
     });
 });
