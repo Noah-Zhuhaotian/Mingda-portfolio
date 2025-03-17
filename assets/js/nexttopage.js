@@ -52,13 +52,13 @@ const prevPageButton = document.getElementById("prev-page");
 if (currentIndex !== -1) {
     nextPageButton.addEventListener("click", () => {
         const nextPage = currentIndex === pages.length - 1 ? pages[0] : pages[currentIndex + 1];
-        window.location.href = nextPage;
+        window.location.href = window.location.origin + nextPage;
     });
 
     prevPageButton.addEventListener("click", () => {
         const prevPage = currentIndex === 0 ? pages[pages.length - 1] : pages[currentIndex - 1];
-        window.location.href = prevPage;
+        window.location.href = window.location.origin + prevPage;
     });
 } else {
-    console.error("当前页面不在 pages 数组中:", currentPath);
+    console.error("The current pages dont' include:", currentPath);
 }
