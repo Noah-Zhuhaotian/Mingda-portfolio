@@ -223,21 +223,34 @@ body {
     display: block;
 }
 
+
+
 .nav-to-page1 {
     justify-content: flex-end;
 }
 
 .nav-to-page1, .nav-to-page2 {
     display: flex;
-    width: 100%;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
     position: relative;
+    width: 100%;
     margin-top: 40px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-to-page2 {
     justify-content: space-between;
+}
+
+.arrow-image {
+    width: 18px;
+    height: auto;
+}
+
+.nexttopage-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .next-page, .prev-page {
@@ -246,15 +259,9 @@ body {
     font-weight: bold;
 }
 
-.arrow-image {
-    width: 18px;
-
-}
-
-.next-page:hover, .prev-page:hover {
+.nav-to-page2:hover {
     opacity: 0.7;
 }
-
 
 
 @media screen and (min-width: 768px) and (max-width: 991px) {

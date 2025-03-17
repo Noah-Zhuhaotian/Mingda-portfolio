@@ -38,7 +38,10 @@
 }
 
 :root{
-    --header-word-size: 16px
+    --header-word-size: 16px;
+    --body-color: #1d1e23;
+    --primary-color: #ffffff;
+    --second-color: #bd53ed;
 }
 
 html{
@@ -233,13 +236,11 @@ header {
     font-weight: 200;
 }
 
-.greeting-container {
-    position: absolute;
-    width: 100%;
-    background-color: #FFFFFF;
-    bottom: 0;
 
-}
+
+
+
+
 
 
 .greeting {
@@ -333,7 +334,7 @@ header {
     height: 80px;
     padding: 30px;
     border-radius: 8px;
-    background: #F4F4F4;
+    background: #FFFFFF;
     border-radius: 20px;
 }
 
@@ -459,7 +460,7 @@ header {
     overflow: hidden; /* 防止内容溢出 */
     padding: 30px; /* 边距 */
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
-    background: #f4f4f4;
+    background: #FFFFFF;
     border-radius: 20px;
     transition: background 0.3s ease-in-out box-shadow 0.3s ease-in-out;
     cursor: pointer;

@@ -9,7 +9,7 @@
     font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/albert-sans-v1-latin-regular.woff2') format('woff2');
+    src: url('../fonts/albert-sans-v1-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -17,7 +17,7 @@
     font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('./fonts/albert-sans-v1-latin-700.woff2') format('woff2');
+    src: url('../fonts/albert-sans-v1-latin-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -25,7 +25,7 @@
     font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 200;
-    src: url('./fonts/albert-sans-v1-latin-200.woff2') format('woff2');
+    src: url('../fonts/albert-sans-v1-latin-200.woff2') format('woff2');
 }
 
 :root {
@@ -450,7 +450,7 @@ header {
     overflow: hidden; /* 防止内容溢出 */
     padding: 30px; /* 边距 */
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
-    background: #f4f4f4;
+    background: #FFFFFF;
     border-radius: 20px;
     transition: background 0.3s ease-in-out box-shadow 0.3s ease-in-out;
     cursor: pointer;
