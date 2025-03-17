@@ -28,7 +28,16 @@
     src: url('./fonts/albert-sans-v1-latin-200.woff2') format('woff2');
 }
 
-:root {
+
+@font-face {
+    font-display: swap;
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/albert-sans-v1-latin-600.woff2') format('woff2');
+}
+
+:root{
     --header-word-size: 16px
 }
 
@@ -80,6 +89,7 @@ header {
     width: 93px;
     height: 36px;
     margin-top: 2px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .main-nav{
@@ -140,11 +150,44 @@ header {
     color: #FFFFFF;
 }
 
+
+.nav__link:not(.autosign)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav__link:not(.autosign):hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.autosign-image:hover {
+    transform: scale(1.1); /* 轻微放大 */
+    opacity: 0.8; /* 降低透明度 */
+}
+
+.nav__link.active {
+    font-weight: bold;
+}
+
+.nav__link.notactive {
+    font-weight: normal;
+}
+
 .send-email {
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
+    background: #333;
+    border: 1px solid #333;
     border-radius: 4px;
-    color: #000000;
+    color: #fff;
     font-family: 'Albert Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -165,8 +208,8 @@ header {
 }
 
 .send-email:hover {
-    background-color: #ccc;
-    border: #ccc;
+    background-color: #666;
+    border: #666;
 }
 
 .phone-show{
@@ -176,7 +219,6 @@ header {
 
 .banner-text-container {
     position: absolute;
-    /* top: 6.25rem; */
     left: 50%; 
     transform: translate(-50%, -50%);
     text-align: center;
@@ -273,7 +315,7 @@ header {
     font-size: 18px;
     line-height: 120%;
     color: #11100E;
-    max-width: 500px;
+    max-width: 550px;
 }
 
 .platform-container {
@@ -322,7 +364,7 @@ header {
     font-size: var(--header-word-size);
     line-height: 24px;
     width: 180px;
-    height: 40px;
+    height: 50px;
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
     background: #000000;
@@ -339,10 +381,10 @@ header {
     color: #000000;
     font-family: 'Albert Sans', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: var(--header-word-size);
     line-height: 24px;
-    height: 40px;
+    height: 50px;
     width: 180px;
     text-align: center;
     align-items: center;
@@ -605,10 +647,52 @@ header {
     text-decoration: none;
 }
 
+.footer-linkdein {
+    transition: opacity 0.3s ease-in-out;
+}
 
-@media (min-width: 1280px) {
+.footer-linkdein:hover {
+    opacity: 0.7;
+}
+
+.footer-email {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-email:hover {
+    opacity: 0.7;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.back-to-top__image {
+    height: 90%;
+}
+
+@media (min-width: 1750px){
     .banner-text-container {
-        top: 20vh; 
+        top: 24%; 
         max-width: 100%;
     }
 
@@ -663,10 +747,71 @@ header {
     .footer-r2 {
         height: 60px;
     }
+
+    .project-title {
+        font-size: 36px;
+    }
+
+    .project-introduction {
+        font-size: 20px;
+    }
+
+    .project-text-container {
+        margin: 10px;
+    }
 }
 
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1281px) and (max-width: 1749px) {
+    .banner-text-container {
+        top: 24%;
+    }
+
+    .slogan {
+        font-size: 4rem; 
+        line-height: 5.8rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 870px;
+        line-height: 3.2rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    .c1 {
+        font-size: 40px;
+    }
+
+    .cr1, .cr2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+}
+
+
+@media screen and (min-width: 1151px) and (max-width: 1280px) {
     .banner-text-container {
         top: 26%;
     }
@@ -676,15 +821,15 @@ header {
 
 }
 
-@media screen and (min-width: 1151px) and (max-width: 1200px) { 
 
-
-}
 
 @media screen and (min-width: 834px) and (max-width: 1151px) {
     header{
         background: url(./images/banner1024.png);
         height: 43vh;
+    }
+    .banner-text-container {
+        top: 26%;
     }
 
 
@@ -692,6 +837,10 @@ header {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-text-container {
+        top: 26%;
+    }
+
    .header-box {
        width: 90%;
    }
@@ -714,7 +863,7 @@ header {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     header{
         background-attachment: scroll; /* Disable fixed background for mobile */
@@ -802,10 +951,26 @@ header {
         font-size: 2.8rem;
         line-height: 2.5rem;
     }
+
+    .page1-project-container {
+        margin-top: 40px;
+    }
     
+    .selected {
+        top: 20px;
+    }
+
+    .project{
+        font-size: 30px;
+    }
+
     .projects-class {
         grid-template-columns: 1fr; /* 一列布局 */
-        padding: 40px 0px;
+        padding: 10px 0px;
+    }
+
+    .project-text-container {
+        margin-bottom: 20px;
     }
 
     .platform-container {
@@ -841,19 +1006,16 @@ header {
     }
 
     .footer-r1{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        margin-top: 20px;
     }
 
     .footer-r2 {
-        /* display: none; */
-        justify-content: center!important;
-        height: 40px;
+        display: none;
 
     }
 
-    .footer-r1, .footer-r2 {
-        width: 100%;
-    }
 
     .cr2 {
         text-align: center;
@@ -883,6 +1045,19 @@ header {
 
     .introduction p {
         width: 85%;
+    }
+
+    .nav__link::before {
+        display: none;
+    }
+    
+    .nav__link:hover::before {
+        display: none;
+    }
+
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
     }
 
 }
@@ -1016,9 +1191,7 @@ header {
     }
 
     .footer-r2 {
-        /* display: none; */
-        justify-content: center!important;
-        height: 40px;
+        display: none;
 
     }
 
@@ -1188,10 +1361,7 @@ header {
     }
 
     .footer-r2 {
-        /* display: none; */
-        justify-content: center!important;
-        height: 40px;
-
+        display: none;
     }
 
     .footer-r1, .footer-r2 {
