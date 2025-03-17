@@ -299,8 +299,13 @@ body {
         gap: 20px;
     }
 
-
+    .next-page, .prev-page {
+        font-size: 16px;
+    }
     
+    .lovestory-photo-container{
+        gap: 10px 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -361,6 +366,12 @@ body {
     }
     .Loan-description-right {
         gap: 20px;
+    }
+    .next-page, .prev-page {
+        font-size: 16px;
+    }
+    .lovestory-photo-container{
+        gap: 10px 10px;
     }
 }
 
