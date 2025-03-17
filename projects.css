@@ -654,6 +654,32 @@ header {
     opacity: 0.7;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.back-to-top__image {
+    height: 90%;
+}
 
 @media (min-width: 1750px){
     .banner-text-container {
@@ -719,11 +745,13 @@ header {
 
     .project-introduction {
         font-size: 20px;
+
     }
 
     .project-text-container {
         margin: 10px;
     }
+
 }
 
 
@@ -772,7 +800,7 @@ header {
     .footer-r2 {
         height: 60px;
     }
-
+    
 }
 
 

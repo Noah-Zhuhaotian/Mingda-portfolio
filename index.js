@@ -3,17 +3,15 @@ const projectsLink = document.getElementById('projects-link');
 const aboutLink = document.getElementById('about-link');
 const autosignLink = document.getElementById('autosign-link');
 
-
+// 手机把nav收成三条线
 let btn = document.getElementById("nav-btn");
-let  nav =  document.getElementById("nav-item");
-
-
-
+let nav = document.getElementById("nav-item");
 
 let hide = true;
 
-btn.addEventListener('click', function () {
-    if (hide){
+btn.addEventListener("click", function (event) {
+    event.stopPropagation(); // 阻止事件冒泡，防止点击按钮时触发document的点击事件
+    if (hide) {
         nav.style.display = "block";
         hide = false;
     } else {
@@ -22,8 +20,18 @@ btn.addEventListener('click', function () {
     }
 });
 
+// 监听整个页面的点击事件
+document.addEventListener("click", function (event) {
+    // 如果 nav 是可见的，并且点击的不是 btn 或 nav 本身，就隐藏 nav
+    if (!hide && !nav.contains(event.target) && !btn.contains(event.target)) {
+        nav.style.display = "none";
+        hide = true;
+    }
+});
 
 
+
+//在对应页面字体加粗
 document.addEventListener("DOMContentLoaded", function () {
     const currentPage = window.location.pathname.split("/").pop();
     if (currentPage === "" || currentPage === "index.html" ){
@@ -100,21 +108,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
-  
-  document.querySelectorAll(".send-email, .footer-email").forEach(function(element) {
+//发邮件
+document.querySelectorAll(".send-email, .footer-email").forEach(function(element) {
       element.addEventListener("click", function () {
           window.location.href = "mailto:claudia.mingdalin@outlook.com?subject=Hey%20Mingda";
       });
-  });
+});
   
-  document.querySelector(".footer-linkdein").addEventListener("click", function () {
+
+//跳转linkedin
+document.querySelector(".footer-linkdein").addEventListener("click", function () {
       window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
-  });
+});
   
   
 
-  
-  document.querySelectorAll(".project-container").forEach((container, index) => {
+//projects卡片点击进入对应的project
+document.querySelectorAll(".project-container").forEach((container, index) => {
     container.addEventListener("click", function () {
         const urls = [
             "/projects/Repayment.html",   
@@ -131,7 +141,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-  
-  
-  setupNavigation();
+
+setupNavigation();
+
+
+
 
