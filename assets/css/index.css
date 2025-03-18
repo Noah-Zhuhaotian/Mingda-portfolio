@@ -39,18 +39,17 @@
 
 :root{
     --header-word-size: 16px;
-    --body-color: #1d1e23;
-    --primary-color: #ffffff;
-    --second-color: #bd53ed;
 }
 
 html{
     background: #eeeeee;
     font-size: 10px;
 }
+
 li{
     list-style: none;
 }
+
 .root{
     width: 100%;
 }
@@ -886,17 +885,32 @@ header {
 
 }
 
+@media screen and (min-width: 1181px) and (max-width: 1280px) {
+    .banner-text-container {
+        top: 26%;
+    }
 
-@media screen and (min-width: 1151px) and (max-width: 1280px) {
+    header{
+        background: url(/assets/images/banner1194.png);
+        height: 42vh;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1151px) and (max-width: 1179px) {
     .banner-text-container {
         top: 26%;
     }
 
 }
 
+
+
 @media screen and (min-width: 1025px) and (max-width: 1150px) {
     header{
-        background: url(../images/banner1024.png);
+        background: url(/assets/images/banner1024.png);
         height: 42vh;
     }
     .banner-text-container {
@@ -904,35 +918,34 @@ header {
     }
 }
 
+@media screen and (width: 1024px) and (height: 768px) {
+    .banner-text-container {
+        top: 170px;
+    }
+}
+
 @media screen and (width: 1024px) and (height: 1366px) {
+    .banner-text-container {
+        top: 165px;
+    }
+
     header{
-        background: url(../images/banner1024.png);
+        background: url(/assets/images/banner1024.png);
         height: 22vh;
     }
-
-    .banner-text-container {
-        top: 180px;
-    }
-
-
 }
+
 
 @media screen and (width: 1024px) and (height: 600px) {
-    header{
-        background: url(../images/banner1024.png);
-        height: 50vh;
-    }
-
     .banner-text-container {
-        top: 180px;
+        top: 155px;
     }
-
-
 }
 
-@media screen and (min-width: 834px) and (max-width: 1023px) {
+
+@media screen and (min-width: 933px) and (max-width: 1023px) {
     header{
-        background: url(../images/banner1024.png);
+        background: url(/assets/images/banner1024.png);
         height: 22vh;
     }
     .banner-text-container {
@@ -941,10 +954,75 @@ header {
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 833px) {
+@media screen and (width: 932px) {
+    .banner-text-container {
+        top: 120px;
+    }
+
+}
+
+@media screen and (min-width: 897px) and (max-width: 931px) {
     header{
-        /* background: url(../images/banner1024.png); */
-        height: 40vh;
+        background: url(/assets/images/banner1024.png);
+        height: 22vh;
+    }
+    .banner-text-container {
+        top: 170px;
+    }
+}
+
+@media screen and (width: 896px) {
+    .banner-text-container {
+        top: 120px;
+    }
+}
+
+@media screen and (min-width: 845px) and (max-width: 895px) {
+    header{
+        background: url(/assets/images/banner1024.png);
+        height: 22vh;
+    }
+    .banner-text-container {
+        top: 170px;
+    }
+}
+
+@media screen and (width: 844px) {
+    .banner-text-container {
+        top: 120px;
+    }
+}
+
+@media screen and (min-width: 833px) and (max-width: 843px) {
+    header{
+        background: url(/assets/images/banner1024.png);
+        height: 22vh;
+    }
+    .banner-text-container {
+        top: 170px;
+    }
+
+}
+
+@media screen and (min-width: 820px) and (max-width: 833px) {
+    header {
+        background: url(/assets/images/banner820.png);
+        height: 20vh;
+    }
+
+    .banner-text-container {
+        top: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 820px) {
+    header{
+        background: url(/assets/images/banner1024.png);
+        height: 25vh;
+    }
+
+    .banner-text-container {
+        top: 150px;
     }
 
     .slogan {
@@ -952,10 +1030,6 @@ header {
         line-height: 2.5rem;
     }
     
-    .banner-text-container {
-        top: 270px;
-    }
-
    .header-box {
        width: 90%;
    }
@@ -1099,10 +1173,10 @@ header {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 668px) and (max-width: 768px) {
     header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
+        background-attachment: scroll;
+        height: 30vh; 
         background-position: center;
     }
 
@@ -1304,7 +1378,8 @@ header {
 }
 
 
-@media screen and (max-width: 414px){
+
+@media screen and (min-width: 414px) and (max-width: 668px){
     header{
         background-attachment: scroll; /* Disable fixed background for mobile */
         height: 30vh; /* Adjust the height for better visibility on smaller screens */
@@ -1477,7 +1552,7 @@ header {
 }
 
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 414px){
 
     header{
         background-attachment: scroll; /* Disable fixed background for mobile */

@@ -231,7 +231,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 40px;
-    transition: opacity 0.3s ease;
+
     cursor: pointer;
 }
 
@@ -256,7 +256,13 @@ body {
     font-weight: bold;
 }
 
-.nav-to-page2:hover {
+#prev-page,
+#next-page {
+    transition: opacity 0.3s ease;
+}
+
+#prev-page:hover,
+#next-page:hover {
     opacity: 0.7;
 }
 
