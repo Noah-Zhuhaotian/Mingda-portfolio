@@ -232,11 +232,38 @@ header {
     font-family: 'Albert Sans', sans-serif;
     color: #FFFFFF;
     line-height: 4rem;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 200;
 }
 
+.slogan span {
+    font-weight: 700;
+    color: #CAEA00;
+}
 
+.slogan span::before {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #CAEA00;
+  
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-70%);
+  
+    animation: blink .7s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+.slogan span.stop-blinking::before {
+    animation: none;
+}
 
 .greeting {
     display: flex; /* Aligns the elements in a row */
@@ -314,37 +341,6 @@ header {
     max-width: 550px;
 }
 
-.platform-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-    gap: 20px; /* Spacing between items */
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Albert Sans', sans-serif;
-    margin-top: 30px;
-}
-
-.platform {
-    height: 80px;
-    padding: 30px;
-    border-radius: 8px;
-    background: #FFFFFF;
-    border-radius: 20px;
-}
-
-.platform span:first-child {
-    font-weight: regular;
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.platform span:last-child {
-    font-size: 1.5rem;
-    color: #999;
-}
-
 .button-container {
     display: flex; /* Aligns the elements in a row */
     justify-content: center; /* Centers the content horizontally */
@@ -418,6 +414,10 @@ header {
     font-size: 40px;
     line-height: 58px;
     color: #11100E;
+}
+
+.page1-project-container {
+    margin-top: 60px;
 }
 
 
@@ -517,6 +517,59 @@ header {
     height: 43px;
 }
 
+.platform-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 80px auto;
+}
+
+.platform-exter-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.platform-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.platform-inner-title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-title {
+    font-size: 36px;
+}
+
+.platform-inner-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.platform-content {
+    font-weight: 400;
+    font-size: 16px;
+    color: #5A5A5A;
+}
+
+.platform-title,
+.platform-inner-title,
+.platform-content {
+    font-family: 'Albert Sans', sans-serif;;
+}
 
 
 .footer-class {
@@ -755,6 +808,19 @@ header {
     .project-text-container {
         margin: 10px;
     }
+
+    .platform-title,
+    .project {
+        font-size: 40px;
+    }
+    
+    .platform-inner-title {
+        font-size: 24px;
+    }
+    
+    .platform-content {
+        font-size: 22px;
+    }
 }
 
 
@@ -802,6 +868,19 @@ header {
 
     .footer-r2 {
         height: 60px;
+    }
+
+    .platform-title,
+    .project {
+        font-size: 38px;
+    }
+    
+    .platform-inner-title {
+        font-size: 22px;
+    }
+    
+    .platform-content {
+        font-size: 20px;
     }
 
 }
@@ -860,7 +939,6 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-
     header{
         background-attachment: scroll; /* Disable fixed background for mobile */
         height: 30vh; /* Adjust the height for better visibility on smaller screens */
@@ -936,8 +1014,14 @@ header {
    }
    .banner-text-container {
         top: 20%;
-        width: 90%;
    }
+
+   .slogan span::before {
+    height: 20px;
+    transform: translateY(-90%);
+  
+  }
+    
     .slogan {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -1135,11 +1219,15 @@ header {
    }
    .banner-text-container {
         top: 20%;
-        width: 90%;
    }
+
+   .slogan span::before {
+    height: 20px;
+    transform: translateY(-90%);
+  
+  }
     .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hi {
@@ -1304,12 +1392,17 @@ header {
        background: #FFFFFF;
    }
    .banner-text-container {
-        top: 20%;
-        width: 90%;
+       top: 20%;
    }
+
+    .slogan span::before {
+       height: 20px;
+       transform: translateY(-90%);
+
+    }
+
     .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hi {
