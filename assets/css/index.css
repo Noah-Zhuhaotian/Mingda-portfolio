@@ -100,7 +100,7 @@ header {
     flex: auto;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -235,11 +235,6 @@ header {
     font-size: 28px;
     font-weight: 200;
 }
-
-
-
-
-
 
 
 

@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--main-font);
-
 }
 
 
@@ -43,9 +42,7 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    margin: var(--project-part1-distance) auto
+    margin: var(--project-part1-distance) auto;
 }
 
 .project-inside-image {
@@ -558,11 +555,9 @@ body {
 
     .inside-project-container,  .inside-project-container3 {
         margin: 14rem 0 0 0;
-    }
-
-    body {
         line-height: 400%;
     }
+
 
     .title-container, 
     .inside-project-container,
