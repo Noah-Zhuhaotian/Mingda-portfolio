@@ -1379,7 +1379,7 @@ header {
 
 
 
-@media screen and (min-width: 414px) and (max-width: 668px){
+@media screen and (min-width: 414px) and (max-width: 667px){
     header{
         background-attachment: scroll; /* Disable fixed background for mobile */
         height: 30vh; /* Adjust the height for better visibility on smaller screens */
@@ -1548,6 +1548,10 @@ header {
     .introduction p {
         width: 85%;
     }
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
+    }
 
 }
 
@@ -1561,7 +1565,7 @@ header {
     }
 
    .header-box{
-       width: 100%;
+       width: 90%;
        position: relative;
    }
    .logo{
@@ -1721,5 +1725,10 @@ header {
 
     .introduction p {
         width: 85%;
+    }
+
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
     }
 }
