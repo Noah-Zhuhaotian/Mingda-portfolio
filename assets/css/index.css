@@ -891,7 +891,7 @@ header {
     }
 
     header{
-        background: url(/assets/images/banner1280.png);
+        background: url('../images/banner1280.png');
         height: 42vh;
     }
 
@@ -910,7 +910,7 @@ header {
 
 @media screen and (min-width: 1025px) and (max-width: 1150px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 42vh;
     }
     .banner-text-container {
@@ -930,7 +930,7 @@ header {
     }
 
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 22vh;
     }
 }
@@ -945,7 +945,7 @@ header {
 
 @media screen and (min-width: 933px) and (max-width: 1023px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 22vh;
     }
     .banner-text-container {
@@ -963,7 +963,7 @@ header {
 
 @media screen and (min-width: 897px) and (max-width: 931px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 22vh;
     }
     .banner-text-container {
@@ -979,7 +979,7 @@ header {
 
 @media screen and (min-width: 845px) and (max-width: 895px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 22vh;
     }
     .banner-text-container {
@@ -995,7 +995,7 @@ header {
 
 @media screen and (min-width: 833px) and (max-width: 843px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 22vh;
     }
     .banner-text-container {
@@ -1006,7 +1006,7 @@ header {
 
 @media screen and (min-width: 820px) and (max-width: 833px) {
     header {
-        background: url(/assets/images/banner820.png);
+        background: url('../images/banner820.png');
         height: 20vh;
     }
 
@@ -1017,7 +1017,7 @@ header {
 
 @media screen and (min-width: 768px) and (max-width: 820px) {
     header{
-        background: url(/assets/images/banner1024.png);
+        background: url('../images/banner1024.png');
         height: 25vh;
     }
 
