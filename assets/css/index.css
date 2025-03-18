@@ -904,7 +904,20 @@ header {
     }
 }
 
-@media screen and (width: 1024px) {
+@media screen and (width: 1024px) and (height: 1366px) {
+    header{
+        background: url(../images/banner1024.png);
+        height: 22vh;
+    }
+
+    .banner-text-container {
+        top: 180px;
+    }
+
+
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
     header{
         background: url(../images/banner1024.png);
         height: 50vh;
