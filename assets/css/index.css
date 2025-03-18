@@ -892,31 +892,55 @@ header {
         top: 26%;
     }
 
+}
 
+@media screen and (min-width: 1025px) and (max-width: 1150px) {
+    header{
+        background: url(../images/banner1024.png);
+        height: 42vh;
+    }
+    .banner-text-container {
+        top: 170px;
+    }
+}
+
+@media screen and (width: 1024px) {
+    header{
+        background: url(../images/banner1024.png);
+        height: 22vh;
+    }
+
+    .banner-text-container {
+        top: 180px;
+    }
 
 
 }
 
-
-
-@media screen and (min-width: 834px) and (max-width: 1151px) {
+@media screen and (min-width: 834px) and (max-width: 1023px) {
     header{
         background: url(../images/banner1024.png);
-        height: 20vh;
+        height: 22vh;
     }
     .banner-text-container {
         top: 170px;
     }
 
-
-
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    
+@media screen and (min-width: 768px) and (max-width: 833px) {
+    header{
+        /* background: url(../images/banner1024.png); */
+        height: 40vh;
+    }
+
+    .slogan {
+        font-size: 4rem;
+        line-height: 2.5rem;
+    }
     
     .banner-text-container {
-        top: 26%;
+        top: 270px;
     }
 
    .header-box {
@@ -937,6 +961,127 @@ header {
    } 
     .projects-class {
         grid-template-columns: 1fr; /* 一列布局 */
+    }
+
+    footer {
+        min-height: 120px; /* 适配手机端更高 */
+        background: #000000;
+    }
+
+    .footer-class {
+        position: absolute;
+        margin-top: 50px;
+    }
+
+    .footer-image {
+        display: none;
+    }
+
+    .c1 {
+        font-size: 20px;
+    }
+
+    .footer-r1{
+        margin-bottom: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer-r2 {
+        display: none;
+
+    }
+
+
+    .cr2 {
+        text-align: center;
+        margin-right: 0px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .footer-signauto {
+        width: 85px;
+        height: 30px;
+    }
+
+    .cr1 {
+        display: none;
+    }
+
+    .left-group {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .right-group {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .introduction p {
+        width: 85%;
+    }
+
+    .nav__link::before {
+        display: none;
+    }
+    
+    .nav__link:hover::before {
+        display: none;
+    }
+
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
+    }
+
+    .main-nav-item{
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+    }
+    .nav-main-list{
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+ 
+     .list-item:last-child {
+        border-bottom: none;
+    }
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center; /* Center horizontally */
+        align-items: center;     /* Center vertically */
+    }
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
     }
 
 }
@@ -1328,7 +1473,7 @@ header {
     }
 
    .header-box{
-       width: 90%;
+       width: 100%;
        position: relative;
    }
    .logo{
@@ -1336,7 +1481,7 @@ header {
        margin-right: 2rem;
    }
    .button-box{
-       padding: 0 2rem;
+       padding: 0 1.2rem;
        font-size: 1.5rem;
    }
    .content{
@@ -1405,7 +1550,7 @@ header {
     }
 
     .slogan {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .hi {
@@ -1445,7 +1590,7 @@ header {
     }
 
     .c1 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .footer-r1{
