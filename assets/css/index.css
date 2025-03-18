@@ -810,7 +810,8 @@ header {
     }
 
     .platform-title,
-    .project {
+    .project
+     {
         font-size: 40px;
     }
     
@@ -901,10 +902,10 @@ header {
 @media screen and (min-width: 834px) and (max-width: 1151px) {
     header{
         background: url(../images/banner1024.png);
-        height: 43vh;
+        height: 20vh;
     }
     .banner-text-container {
-        top: 26%;
+        top: 170px;
     }
 
 
@@ -912,6 +913,8 @@ header {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    
     .banner-text-container {
         top: 26%;
     }
