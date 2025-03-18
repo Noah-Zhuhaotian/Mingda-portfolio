@@ -885,14 +885,20 @@ header {
 
 }
 
-@media screen and (min-width: 1181px) and (max-width: 1280px) {
+@media screen and (width: 1280px) {
+    .banner-text-container {
+        top: 26%;
+    }
+}
+
+@media screen and (min-width: 1181px) and (max-width: 1279px) {
     .banner-text-container {
         top: 26%;
     }
 
     header{
         background: url('../images/banner1280.png');
-        height: 42vh;
+        height: 38vh;
     }
 
 }
@@ -909,10 +915,10 @@ header {
 
 
 @media screen and (min-width: 1025px) and (max-width: 1150px) {
-    header{
-        background: url('../images/banner1024.png');
+    /* header{
+        background: url('../images/banner1194.png');
         height: 42vh;
-    }
+    } */
     .banner-text-container {
         top: 170px;
     }
@@ -962,12 +968,8 @@ header {
 }
 
 @media screen and (min-width: 897px) and (max-width: 931px) {
-    header{
-        background: url('../images/banner1024.png');
-        height: 22vh;
-    }
     .banner-text-container {
-        top: 170px;
+        top: 130px;
     }
 }
 
