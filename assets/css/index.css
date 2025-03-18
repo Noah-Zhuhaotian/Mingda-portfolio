@@ -907,7 +907,7 @@ header {
 @media screen and (width: 1024px) {
     header{
         background: url(../images/banner1024.png);
-        height: 22vh;
+        height: 50vh;
     }
 
     .banner-text-container {
