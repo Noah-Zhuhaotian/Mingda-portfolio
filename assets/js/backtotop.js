@@ -10,15 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
   
     function toggleBackToTop() {
       const currentScrollY = window.scrollY;
-      console.log("Scroll Position:", window.scrollY); // 调试滚动值
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
   
-      if (window.scrollY > 700) {
+      if (window.scrollY > 700 ) {
         backToTopButton.classList.add("show"); // 添加 show 类
       } else {
         backToTopButton.classList.remove("show"); // 移除 show 类
       }
 
-      if (currentScrollY < lastScrollY) {
+      if (currentScrollY < lastScrollY && currentScrollY + clientHeight < scrollHeight - 50 ) {
         backToTopButton.classList.remove("show");
     }
 
