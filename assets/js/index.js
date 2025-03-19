@@ -117,9 +117,13 @@ document.querySelectorAll(".send-email, .footer-email").forEach(function(element
   
 
 //跳转linkedin
-document.querySelector(".footer-linkdein").addEventListener("click", function () {
-      window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
+document.addEventListener("DOMContentLoaded", function (){
+  document.querySelector(".footer-linkdein").addEventListener("click", function () {
+    console.log("Footer LinkedIn button clicked!");
+    window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
 });
+});
+
 
 
 

@@ -468,63 +468,11 @@ li{
     height: 90%;
 }
 
+.footer-mobile-container {
+    display: none;
+}
+
 @media (min-width: 1750px){
-    .banner-text-container {
-        top: 20vh; 
-        max-width: 100%;
-    }
-
-    .slogan {
-        font-size: 4.5rem; 
-        line-height: 6rem;
-        
-    }
-
-    .download_resume {
-        width: 240px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    
-    .watchvideo {
-        width: 240px;
-        height: 60px;
-        font-size: 2rem;
-    }
-
-    .introduction p {
-        font-size: 2.4rem;
-        max-width: 870px;
-        line-height: 3.2rem;
-        margin-top: 15px;
-        margin-bottom: 50px;
-    }
-
-    .platform-container {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .platform {
-        padding: 24px;
-    }
-
-    .platform span:last-child {
-        font-size: 1.4rem;
-    }
-
-    .c1 {
-        font-size: 40px;
-    }
-
-    .cr1, .cr2 {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-
-    .footer-r2 {
-        height: 60px;
-    }
 
     .project-title {
         font-size: 36px;
@@ -541,186 +489,20 @@ li{
 
 }
 
-
-@media screen and (min-width: 1281px) and (max-width: 1749px) {
-    .banner-text-container {
-        top: 26%;
+@media screen and (min-width: 769px) and (max-width: 992px) {  
+    .content{
+        width: 80%;
     }
-
-    .slogan {
-        font-size: 4.5rem; 
-        line-height: 6rem;
-        
-    }
-
-    .download_resume {
-        width: 240px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    
-    .watchvideo {
-        width: 240px;
-        height: 60px;
-        font-size: 2rem;
-    }
-
-    .introduction p {
-        font-size: 2.4rem;
-        max-width: 870px;
-        line-height: 3.2rem;
-        margin-top: 15px;
-        margin-bottom: 50px;
-    }
-
-
-    .c1 {
-        font-size: 40px;
-    }
-
-    .cr1, .cr2 {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-
-    .footer-r2 {
-        height: 60px;
-    }
-    
-}
-
-
-@media screen and (min-width: 1151px) and (max-width: 1280px) {
-    .banner-text-container {
-        top: 26%;
-    }
-
-
-
-
-}
-
-
-
-@media screen and (min-width: 834px) and (max-width: 1151px) {
-    header{
-        background: url(../images/banner1024.png);
-        height: 43vh;
-    }
-    .banner-text-container {
-        top: 26%;
-    }
-
-
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .banner-text-container {
-        top: 26%;
-    }
-
-   .header-box {
-       width: 90%;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-   }
-   .content{
-       width: 90%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
-    }
-
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
-    .footer-class {
-        position: absolute;
-        margin-top: 50px;
-    }
-
-    .footer-image {
-        display: none;
-    }
-
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 10px;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-
-    }
-
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .introduction p {
-        width: 85%;
-    }
-
-    .nav__link::before {
-        display: none;
-    }
-    
-    .nav__link:hover::before {
-        display: none;
-    }
-
-    .back-to-top {
-        right: 1rem;
-        bottom: 10rem;
-    }
-
+ 
+ 
     .main-nav-item{
         display: none;
         position: absolute;
         width: 10rem;
-        right: 0;
+        right: 3rem;
         top: 6.5rem;
         border-radius: .5rem;
+        margin-right: 1rem;
     }
     .nav-main-list{
         width: 100%;
@@ -735,8 +517,8 @@ li{
         margin: 0 1rem;
         border-bottom: 1px solid #FFFFFF;
     }
- 
-     .list-item:last-child {
+     
+    .list-item:last-child {
         border-bottom: none;
     }
  
@@ -744,8 +526,8 @@ li{
         display: flex;
         height: 60px;
         width: 60px;
-        justify-content: center; /* Center horizontally */
-        align-items: center;     /* Center vertically */
+        justify-content: flex-end; 
+        align-items: center;
     }
     .nav-btn{
         height: 60%;
@@ -761,96 +543,268 @@ li{
         width: 40px;
         background: #FFFFFF;
     }
+ 
+     .hi {
+         font-size: 2.8rem;
+         line-height: 2.5rem;
+     }
+     .projects-class {
+         grid-template-columns: 1fr; 
+     }
+ 
+     .platform-container {
+         display: none;
+     }
+     .text {
+         font-size: 2.3rem;
+         line-height: 2.5rem;
+     }
+ 
+     .button-container {
+         display: grid;
+         grid-template-columns: 1fr;
+         margin: 0 50%; 
+     }
+ 
+ 
+     .footer-class {
+        display: none;
+     }
+
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
+        gap: 20px;
+        justify-content: center;
+        align-items: center; 
+     }
+
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 60px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 16px;
+
+     }
+
+     .row4 {
+        font-size: 14px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
+ 
+     .introduction p {
+         width: 85%;
+         line-height: 130%;
+     }
+
+     .back-to-top {
+         right: 1rem;
+         bottom: 10rem;
+     }
+     .slogan {
+        white-space: wrap;
+        width: 90%;
+     }
+
+     .mobile-platform-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        width: 80%;
+        margin: 80px auto 100px auto;
+    }
+
+    .platform-title-container {
+        margin-bottom: 30px;
+        text-align: center; 
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .platform-title {
+        font-size: 28px;
+        margin: 0 auto
+    }
+
+    .platform {
+        border: 1px solid #CCCC;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .platform-inner-title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background: #FFFFFF;
+    }
+    .platform-inner-title {
+        font-weight: 400;
+    }
+
+    .platform-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .platform-content-container {
+        padding: 10px;
+        display: none;
+        margin: 0 20px 20px 20px;
+    }
+
+    .platform.active .platform-content-container {
+        display: block; 
+    }
+
+    .platform-inner-title-container::after {
+        content: "";
+        margin-left: auto;
+        margin-right: 10px;
+        width: 13px;
+        height: 14px;
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"%3E%3Cpolyline points="4,8 12,18 20,8" stroke="black" opacity="0.5"/%3E%3C/svg%3E');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+
+    }
+    
+    .platform.active .platform-inner-title-container::after {
+        transform: rotate(180deg);
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-text-container {
+        padding: 30px 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
 
 }
 
-@media screen and (max-width: 768px) {
 
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .content{
+        width: 80%;
     }
-
-   .header-box{
-       width: 90%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-
+ 
+ 
+    .main-nav-item{
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
+    }
+    .nav-main-list{
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+     
     .list-item:last-child {
-       border-bottom: none;
-   }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-        top: 20%;
-        width: 90%;
-   }
-    .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        border-bottom: none;
     }
-
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: flex-end; 
+        align-items: center;
+    }
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
     }
     
     .selected {
@@ -870,79 +824,7 @@ li{
         margin-bottom: 20px;
     }
 
-    .platform-container {
-        display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
 
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
-    }
-    
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
-    .footer-class {
-        position: absolute;
-        margin-top: 50px;
-    }
-
-    .footer-image {
-        display: none;
-    }
-
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 10px;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-
-    }
-
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .introduction p {
-        width: 85%;
-    }
 
     .nav__link::before {
         display: none;
@@ -957,346 +839,261 @@ li{
         bottom: 10rem;
     }
 
-}
-
-
-@media screen and (max-width: 414px){
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
-    }
-
-   .header-box{
-       width: 90%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-    
-   .list-item:last-child {
-       border-bottom: none;
-   }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-        top: 20%;
-        width: 90%;
-   }
-    .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
-    }
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
-    }
-
-    .platform-container {
-        display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
-
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
-    }
-
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
     .footer-class {
-        position: absolute;
-        margin-top: 50px;
-    }
-
-    .footer-image {
         display: none;
-    }
+     }
 
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-
-    }
-
-    .footer-r1, .footer-r2 {
-        width: 100%;
-    }
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
         gap: 20px;
-    }
+        justify-content: center;
+        align-items: center; 
+     }
 
-    .introduction p {
-        width: 85%;
-    }
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 60px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 16px;
+
+     }
+
+     .row4 {
+        font-size: 14px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
 
 }
 
 
-@media screen and (max-width: 375px){
-
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
+@media screen and (max-width: 413px) {
+    .content{
+        width: 80%;
     }
-
-   .header-box{
-       width: 100%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 1.2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-
+ 
+ 
+    .main-nav-item{
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
+    }
+    .nav-main-list{
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+     
     .list-item:last-child {
         border-bottom: none;
     }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-       top: 20%;
-   }
-
-    .slogan span::before {
-       height: 20px;
-       transform: translateY(-90%);
-
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center; 
+        align-items: center;
+    }
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
+    }
+    
+    .selected {
+        top: 10px;
     }
 
-    .slogan {
-        font-size: 1.8rem;
+    .project{
+        font-size: 38px;
     }
 
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
-    }
     .projects-class {
         grid-template-columns: 1fr; /* 一列布局 */
+        padding: 10px 0px;
     }
 
-    .platform-container {
-        display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
-
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
-    }
-
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
-    .footer-class {
-        position: absolute;
-        margin-top: 50px;
-    }
-
-    .footer-image {
-        display: none;
-    }
-
-    .c1 {
-        font-size: 16px;
-    }
-
-    .footer-r1{
+    .project-text-container {
         margin-bottom: 20px;
     }
 
-    .footer-r2 {
+
+
+    .nav__link::before {
+        display: none;
+    }
+    
+    .nav__link:hover::before {
         display: none;
     }
 
-    .footer-r1, .footer-r2 {
-        width: 100%;
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
     }
 
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
+    .footer-class {
         display: none;
-    }
+     }
 
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
         gap: 20px;
-    }
+        justify-content: center;
+        align-items: center; 
+     }
 
-    .introduction p {
-        width: 85%;
-    }
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 60px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 14px;
+
+     }
+
+     .row4 {
+        font-size: 12px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
+
+
 }
