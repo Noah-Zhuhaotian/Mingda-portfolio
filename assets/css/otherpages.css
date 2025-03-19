@@ -66,6 +66,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 159px;
+    margin-bottom: 150px;
     gap: 40px;
 }
 
