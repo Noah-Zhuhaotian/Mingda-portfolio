@@ -330,6 +330,10 @@ body {
         display: none;
     }
 
+    .inside-project-container, .inside-project-container3 {
+        margin: 10rem 0 0 0;
+    }
+
     .project-inside-container1 {
         margin-top: 30px;
     }
@@ -396,11 +400,22 @@ body {
         gap: 10px 10px;
     }
 
-    /* .inside-project-container,
+    .container5-question,
+    .loan-container5-question,
+    .sharepoint-container5-question,
+    .design-container5-question {
+        line-height: 2.3rem;
+    }
+
+
+    
+    .title-container, 
+    .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
-        line-height: 1.5rem;
-    } */
+        gap: 1.5rem;
+    }
+
 }
 
 
