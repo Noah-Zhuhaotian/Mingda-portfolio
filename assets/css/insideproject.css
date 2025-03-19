@@ -331,15 +331,20 @@ body {
     }
 
     .project-inside-container1 {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .inside-project-title {
         font-size: 3rem;
+        line-height: 3.5rem;
     }
 
     .timeline-description-container {
         gap: 8rem;
+    }
+
+    .inside-project-paragraph {
+        line-height: 2.5rem;
     }
 
     .inside-project-paragraph, 
@@ -390,6 +395,12 @@ body {
     .lovestory-photo-container{
         gap: 10px 10px;
     }
+
+    /* .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        line-height: 1.5rem;
+    } */
 }
 
 
