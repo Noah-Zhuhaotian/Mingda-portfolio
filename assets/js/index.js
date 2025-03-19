@@ -120,8 +120,8 @@ document.querySelectorAll(".send-email, .footer-email").forEach(function(element
 document.querySelector(".footer-linkdein").addEventListener("click", function () {
       window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
 });
-  
-  
+
+
 
 //projects卡片点击进入对应的project
 document.querySelectorAll(".project-container").forEach((container, index) => {
