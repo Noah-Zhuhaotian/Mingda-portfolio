@@ -19,14 +19,14 @@ function typingEffect() {
   if (!isDeleting && charIndex < currentWord.length) {
     charIndex++;
     
-    setTimeout(typingEffect, 150);
+    setTimeout(typingEffect, 90);
   } else if (isDeleting && charIndex > 0) {
     /**
      * 3. 设置删除每个字符的效果
      */
     charIndex--;
     
-    setTimeout(typingEffect, 150);
+    setTimeout(typingEffect, 90);
   } else {
     /** 
      * 2.设置当前需要删除的单词组或下一个要播放的单词组:
@@ -35,7 +35,7 @@ function typingEffect() {
     wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
 
     dynamicText.classList.remove("stop-blinking");
-    setTimeout(typingEffect, 150);
+    setTimeout(typingEffect, 90);
   }
 };
 
