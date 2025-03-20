@@ -223,9 +223,9 @@ li{
 .projects-class {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 两列布局 */
-    gap: 40px; /* 控制 container 之间的间距 */
+    gap: 60px; /* 控制 container 之间的间距 */
     width: 80%; /* 控制 container 的宽度 */
-    margin: 20px auto; /* 居中整个 section */
+    margin: 40px auto; /* 居中整个 section */
     padding: 20px;
 }
 
@@ -239,12 +239,11 @@ li{
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
     background: #FFFFFF;
     border-radius: 20px;
-    transition: background 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .project-container:hover {
-    background: #FFFFFF; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -289,6 +288,7 @@ li{
 
 .company-name, .project-introduction {
     font-size: 18px;
+    line-height: 22px;
 }
 
 .project-title {
@@ -322,16 +322,13 @@ li{
     width: 85%;
     display: flex;
     justify-content: space-between;
-    /* height: 50px; */
 }
   
 .footer-r1 {
-    /* top: 20%; */
     align-items: center;
     justify-content: space-between;
     position: absolute;
     margin-bottom: 70px;
-    /* padding: 30 0 0 0; */
 }
 
 
@@ -478,15 +475,22 @@ li{
         font-size: 36px;
     }
 
-    .project-introduction {
-        font-size: 20px;
-
+    .company-name, .project-introduction {
+        font-size: 22px;
+        line-height: 30px;
     }
 
     .project-text-container {
         margin: 10px;
     }
 
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1749px) {
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {  
@@ -663,6 +667,9 @@ li{
         margin-top: 0;
         margin-bottom: 20px;
     }
+    .project-container:hover {
+        transform: none;
+    }
 
 }
 
@@ -837,6 +844,9 @@ li{
         width: 30px;
         height: 30px;
      }
+     .project-container:hover {
+        transform: none;
+    }
 
 }
 
@@ -1011,5 +1021,8 @@ li{
         height: 30px;
      }
 
+     .project-container:hover {
+        transform: none;
+    }
 
 }

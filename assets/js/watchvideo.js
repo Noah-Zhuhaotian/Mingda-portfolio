@@ -1,4 +1,5 @@
 const videos_button = [
+    ".myvideo",
     ".repayment-video",
     ".loan-video",
     ".designsystem-video",
@@ -8,6 +9,7 @@ const videos_button = [
 
 // 对应的视频链接
 const videoLinks = {
+    ".myvideo": "https://youtu.be/5A4vKF_5CBA",
     ".repayment-video": "https://youtu.be/fraEIbTOkws",
     ".loan-video": "https://youtu.be/gFTCM0DA03E",
     ".designsystem-video": "https://youtu.be/aQNs5diGQBg",

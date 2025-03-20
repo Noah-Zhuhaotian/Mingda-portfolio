@@ -476,9 +476,9 @@ $wordCount: 4; */
 .projects-class {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 两列布局 */
-    gap: 40px; /* 控制 container 之间的间距 */
+    gap: 60px; /* 控制 container 之间的间距 */
     width: 80%; /* 控制 container 的宽度 */
-    margin: 20px auto; /* 居中整个 section */
+    margin: 40px auto; /* 居中整个 section */
     padding: 20px;
 }
 
@@ -492,13 +492,13 @@ $wordCount: 4; */
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
     background: #FFFFFF;
     border-radius: 20px;
-    transition: background 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .project-container:hover {
-    background: #FFFFFF; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .project-image-container {
@@ -545,7 +545,8 @@ $wordCount: 4; */
 }
 
 .company-name, .project-introduction {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .project-title {
@@ -602,6 +603,7 @@ $wordCount: 4; */
     font-weight: 400;
     font-size: 16px;
     color: #5A5A5A;
+    line-height: 2.2rem;
 }
 
 .platform-title,
@@ -806,9 +808,9 @@ $wordCount: 4; */
 
     .introduction p {
         font-size: 2.4rem;
-        max-width: 870px;
-        line-height: 3.2rem;
-        margin-top: 15px;
+        max-width: 700px;
+        line-height: 3.4rem;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
 
@@ -842,8 +844,9 @@ $wordCount: 4; */
         font-size: 36px;
     }
 
-    .project-introduction {
-        font-size: 20px;
+    .company-name, .project-introduction {
+        font-size: 22px;
+        line-height: 30px;
     }
 
     .project-text-container {
@@ -861,7 +864,8 @@ $wordCount: 4; */
     }
     
     .platform-content {
-        font-size: 22px;
+        font-size: 20px;
+        line-height: 2.8rem;
     }
 }
 
@@ -888,7 +892,7 @@ $wordCount: 4; */
 
     .introduction p {
         font-size: 2.4rem;
-        max-width: 870px;
+        max-width: 700px;
         line-height: 3.2rem;
         margin-top: 15px;
         margin-bottom: 50px;
@@ -922,6 +926,18 @@ $wordCount: 4; */
         font-size: 20px;
     }
 
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+}
+
+@media screen and (min-width: 1053px) and (max-width: 1280px) {
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 
@@ -1182,6 +1198,9 @@ $wordCount: 4; */
         padding: 30px 0;
         margin-top: 0;
         margin-bottom: 20px;
+    }
+    .project-container:hover {
+        transform: none;
     }
 
 }
@@ -1446,6 +1465,10 @@ $wordCount: 4; */
         margin-bottom: 20px;
     }
 
+    .project-container:hover {
+        transform: none;
+    }
+
 }
 
 
@@ -1706,6 +1729,10 @@ $wordCount: 4; */
         padding: 30px 0;
         margin-top: 0;
         margin-bottom: 20px;
+    }
+
+    .project-container:hover {
+        transform: none;
     }
 
 }
