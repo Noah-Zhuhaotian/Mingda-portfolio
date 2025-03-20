@@ -212,6 +212,18 @@ li{
     display: none;
 }
 
+.page-container {
+    animation: expand 0.3s ease both; 
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .banner-text-container {
     width: 100%;

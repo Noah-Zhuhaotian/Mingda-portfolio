@@ -8,7 +8,8 @@ header {
     position: relative;
     width: 100%;
     margin: 30px auto; 
-    height: auto;  
+    height: auto; 
+    animation: expand 1s ease both; 
 }
 
 .page2-container {
@@ -16,6 +17,17 @@ header {
     height: auto;
     position: relative;
     margin: 80px auto; 
+    transform-origin: top;
+    animation: expand 1s ease both;
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
  
 .name-container {
