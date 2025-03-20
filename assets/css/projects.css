@@ -653,9 +653,6 @@ li{
          bottom: 10rem;
      }
     
-    .platform.active .platform-inner-title-container::after {
-        transform: rotate(180deg);
-    }
 
     .project-title {
         font-size: 22px;
