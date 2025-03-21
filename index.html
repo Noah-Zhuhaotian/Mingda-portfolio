@@ -75,8 +75,22 @@
 
         <div class="button-container">
             <button class="download_resume" id="downloadBtn">Download Resume</button>
-            <button class="watchvideo myvideo">Watch My Video<img src="./assets/images/triangle.png" alt="triangle-image" class="triangle-image"></button>
+            <button class="watchvideo myvideo" id="showVideoBtn">Watch My Video<img src="./assets/images/triangle.png" alt="triangle-image" class="triangle-image"></button>
         </div>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="video-container" id="videoContainer">
+            <video id="myVideo" controls controlsList="nodownload">
+            <!-- <video id="myVideo" width="320" height="240" controls controlsList="nodownload"> -->
+                <source src="./assets/video/myvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="closeBtn" class="close-btn">&times;</button>
+            <button id="replayBtn" class="replay-btn">&#8634</button>
+        </div>
+
+
+
 
         <div class="page1-project-container">
             <div class="selected">
@@ -388,6 +402,7 @@
         <script src="./assets/js/switch.js"></script>
         <script src="./assets/js/collapse.js"></script>
         <script src="./assets/js/watchvideo.js"></script>
+        <script src="./assets/js/myvideo.js"></script>
 
 </body>
 </html>
