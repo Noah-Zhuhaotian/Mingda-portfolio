@@ -66,6 +66,10 @@ body {
     justify-content: center;
 }
 
+
+
+
+
 .View-Prototype {
     background: #000000;
     border: 1px solid #FFFFFF;
@@ -79,13 +83,28 @@ body {
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    animation-name: shakebutton;
+    animation-duration: 1.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
 }
 
 
 .View-Prototype:hover {
     background-color: #333;
     color: #fff;
+    animation: none;
 }
+
+
+@keyframes shakebutton { 
+    10%, 90% { transform: translate3d(-2px, 0, 0); }
+    20%, 80% { transform: translate3d(+4px, 0, 0); }
+    30%, 70% { transform: translate3d(-8px, 0, 0); }
+    40%, 60% { transform: translate3d(+8px, 0, 0); }
+    50% { transform: translate3d(-10px, 0, 0); }
+}
+
+
 
 .inside-project-container2{
     margin: 5rem 0 0 0;
