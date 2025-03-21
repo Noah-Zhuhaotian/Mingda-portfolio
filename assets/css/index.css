@@ -948,6 +948,10 @@ $wordCount: 4; */
         font-size: 20px;
         line-height: 2.8rem;
     }
+
+    .project-container {
+        padding: 40px;
+    }
 }
 
 
@@ -1276,13 +1280,14 @@ $wordCount: 4; */
     }
 
     .project-text-container {
-        padding: 30px 0;
+        padding: 10px 0;
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .project-container:hover {
         transform: none;
     }
+
 
 }
 
@@ -1541,15 +1546,23 @@ $wordCount: 4; */
     }
 
     .project-text-container {
-        padding: 30px 0;
+        padding: 20px 0;
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .project-container:hover {
         transform: none;
     }
 
+    .project-container {
+        padding: 20px;
+    }
+
+    .project-text-container {
+        margin-top: 0;
+        height: 30%;
+    }
 }
 
 
@@ -1807,13 +1820,16 @@ $wordCount: 4; */
     }
 
     .project-text-container {
-        padding: 30px 0;
+        padding: 20px 0;
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .project-container:hover {
         transform: none;
+    }
+    .project-container {
+        padding: 20px;
     }
 
 }
