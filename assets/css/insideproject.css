@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--main-font);
-
 }
 
 
@@ -43,9 +42,17 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    margin: var(--project-part1-distance) auto
+    margin: var(--project-part1-distance) auto;
+    animation: expand 1s ease both; 
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .project-inside-image {
@@ -58,6 +65,10 @@ body {
     display: flex;
     justify-content: center;
 }
+
+
+
+
 
 .View-Prototype {
     background: #000000;
@@ -72,13 +83,28 @@ body {
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    animation-name: shakebutton;
+    animation-duration: 1.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
 }
 
 
 .View-Prototype:hover {
     background-color: #333;
     color: #fff;
+    animation: none;
 }
+
+
+@keyframes shakebutton { 
+    10%, 90% { transform: translate3d(-2px, 0, 0); }
+    20%, 80% { transform: translate3d(+4px, 0, 0); }
+    30%, 70% { transform: translate3d(-8px, 0, 0); }
+    40%, 60% { transform: translate3d(+8px, 0, 0); }
+    50% { transform: translate3d(-10px, 0, 0); }
+}
+
+
 
 .inside-project-container2{
     margin: 5rem 0 0 0;
@@ -90,7 +116,8 @@ body {
 .inside-project-container6 {
     display: flex;
     flex-direction: column;
-    gap: 2rem; 
+    gap: 3rem;
+    line-height: 3rem;
 }
 
 .inside-project-paragraph, 
@@ -142,7 +169,7 @@ body {
 }
 
 .inside-project-container,  .inside-project-container3 {
-    margin: 8rem 0 0 0;
+    margin: 15rem 0 0 0;
 }
 
 .inside-project-title2 {
@@ -223,21 +250,34 @@ body {
     display: block;
 }
 
+
+
 .nav-to-page1 {
     justify-content: flex-end;
 }
 
 .nav-to-page1, .nav-to-page2 {
     display: flex;
-    width: 100%;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
     position: relative;
+    width: 100%;
     margin-top: 40px;
+
+    cursor: pointer;
 }
 
 .nav-to-page2 {
     justify-content: space-between;
+}
+
+.arrow-image {
+    width: 18px;
+    height: auto;
+}
+
+.nexttopage-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .next-page, .prev-page {
@@ -246,7 +286,13 @@ body {
     font-weight: bold;
 }
 
-.next-page:hover, .prev-page:hover {
+#prev-page,
+#next-page {
+    transition: opacity 0.3s ease;
+}
+
+#prev-page:hover,
+#next-page:hover {
     opacity: 0.7;
 }
 
@@ -313,16 +359,25 @@ body {
         display: none;
     }
 
+    .inside-project-container, .inside-project-container3 {
+        margin: 10rem 0 0 0;
+    }
+
     .project-inside-container1 {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .inside-project-title {
         font-size: 3rem;
+        line-height: 3.5rem;
     }
 
     .timeline-description-container {
         gap: 8rem;
+    }
+
+    .inside-project-paragraph {
+        line-height: 2.5rem;
     }
 
     .inside-project-paragraph, 
@@ -373,6 +428,23 @@ body {
     .lovestory-photo-container{
         gap: 10px 10px;
     }
+
+    .container5-question,
+    .loan-container5-question,
+    .sharepoint-container5-question,
+    .design-container5-question {
+        line-height: 2.3rem;
+    }
+
+
+    
+    .title-container, 
+    .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        gap: 1.5rem;
+    }
+
 }
 
 
@@ -421,14 +493,14 @@ body {
     }
 
     .inside-project-container,  .inside-project-container3 {
-        margin: 10rem 0 0 0;
+        margin: 18rem 0 0 0;
     }
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
-        gap: 3rem;
+        gap: 4rem;
     }
 
 }
@@ -486,14 +558,14 @@ body {
 
     
     .inside-project-container,  .inside-project-container3 {
-        margin: 12rem 0 0 0;
+        margin: 18rem 0 0 0;
     }
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
-        gap: 3rem;
+        gap: 4rem;
     }
 
 }
@@ -544,17 +616,16 @@ body {
     }
 
     .inside-project-container,  .inside-project-container3 {
-        margin: 14rem 0 0 0;
-    }
-
-    body {
+        margin: 18rem 0 0 0;
         line-height: 400%;
     }
+
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
         gap: 3rem;
+        line-height: 400%;
     }
 }
