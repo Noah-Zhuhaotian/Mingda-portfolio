@@ -573,7 +573,7 @@ $wordCount: 4; */
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
     background: #FFFFFF;
     border-radius: 20px;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
     cursor: pointer;
 }
 
