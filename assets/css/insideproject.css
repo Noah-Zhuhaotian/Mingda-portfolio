@@ -55,22 +55,29 @@ body {
     }
 }
 
-/* .project-inside-image {
+.project-inside-image {
     object-fit: cover;
     width: 100%;
-} */
+}
 
-.project-inside-container1 {
+.project-inside-cover-container {
     width: 100%;
     min-height: 200px; /* 根据需要调整 */
     background-color: #f0f0f0; /* 占位背景色 */
+    border-radius: 20px;
 }
 
-.project-inside-image {
+.project-inside-image-cover {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
+
+/* .project-inside-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} */
 
 .inside-button-container {
     margin: 20px;
