@@ -62,7 +62,6 @@ body {
 
 .project-inside-cover-container {
     width: 100%;
-    min-height: 200px; /* 根据需要调整 */
     background-color: #f0f0f0; /* 占位背景色 */
     border-radius: 20px;
 }
@@ -73,20 +72,12 @@ body {
     object-fit: cover;
 }
 
-/* .project-inside-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-} */
 
 .inside-button-container {
-    margin: 20px;
+    margin: 30px;
     display: flex;
     justify-content: center;
 }
-
-
-
 
 
 .View-Prototype {
