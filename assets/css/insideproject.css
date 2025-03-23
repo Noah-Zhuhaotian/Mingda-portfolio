@@ -161,7 +161,7 @@ body {
 }
 
 .timeline-description-para-spec1 {
-    color: #E65744;
+    color: #FF4D4F;
 }
 
 .timeline-description-para-spec2 {
@@ -282,7 +282,6 @@ body {
 .next-page, .prev-page {
     color: #2C2C2C;
     font-size: 20px;
-    font-weight: bold;
 }
 
 #prev-page,
