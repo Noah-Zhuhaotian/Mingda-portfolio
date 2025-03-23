@@ -93,6 +93,14 @@ li{
     flex: auto;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -116,7 +124,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 3rem;
     white-space: nowrap;  /* Prevent text from wrapping */
     overflow: hidden; /* Optionally hide overflowing text */
     text-overflow: ellipsis; /* Optionally show ellipsis if text overflows */
@@ -177,6 +185,10 @@ li{
 
 .nav__link.notactive {
     font-weight: normal;
+}
+
+.button-box {
+    padding: 0 0 0 30px;
 }
 
 .send-email {
@@ -1054,7 +1066,6 @@ $wordCount: 4; */
 
     .header-box {
         max-width: 1280px;
-        /* width: 100%; */
     }
 
     .platform-container {
