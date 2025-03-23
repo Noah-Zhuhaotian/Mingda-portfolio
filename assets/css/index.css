@@ -910,11 +910,6 @@ $wordCount: 4; */
         font-size: 40px;
     }
 
-    .cr1, .cr2 {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
 
     .footer-r2 {
         height: 60px;
@@ -944,17 +939,147 @@ $wordCount: 4; */
     }
     
     .platform-content {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 2.8rem;
     }
 
     .project-container {
         padding: 40px;
     }
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+        width: 100%;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1749px) {
+    .slogan {
+        font-size: 4rem; 
+        line-height: 5.8rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 700px;
+        line-height: 3.2rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    .c1 {
+        font-size: 40px;
+    }
+
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+    .platform-title,
+    .project {
+        font-size: 38px;
+    }
+    
+    .platform-inner-title {
+        font-size: 22px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+    }
+
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+        width: 100%;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+
 }
 
 
-@media screen and (min-width: 1281px) and (max-width: 1749px) {
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
 
     .slogan {
         font-size: 4rem; 
@@ -988,7 +1113,7 @@ $wordCount: 4; */
     }
 
     .cr1, .cr2 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 28px;
     }
 
@@ -1007,7 +1132,7 @@ $wordCount: 4; */
     }
     
     .platform-content {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .company-name, .project-introduction {
