@@ -42,7 +42,7 @@
 }
 
 html{
-    background: #eeeeee;
+    background: #FFFFFF;
     font-size: 10px;
 }
 
@@ -93,6 +93,14 @@ li{
     flex: auto;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -116,7 +124,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 3rem;
     white-space: nowrap;  /* Prevent text from wrapping */
     overflow: hidden; /* Optionally hide overflowing text */
     text-overflow: ellipsis; /* Optionally show ellipsis if text overflows */
@@ -177,6 +185,10 @@ li{
 
 .nav__link.notactive {
     font-weight: normal;
+}
+
+.button-box {
+    padding: 0 0 0 30px;
 }
 
 .send-email {
@@ -383,7 +395,7 @@ $wordCount: 4; */
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 120%;
+    line-height: 24px;
     color: #11100E;
     max-width: 550px;
 }
@@ -431,7 +443,7 @@ $wordCount: 4; */
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    background-color: #eeeeee;
+    background-color: #FFFFFF;
 }
 
 .download_resume:hover {
@@ -566,12 +578,13 @@ $wordCount: 4; */
 .project-container {
     display: flex;
     flex-direction: column;
+    /* border: 2px solid #CCCCCC; */
     width: 100%;
     height: auto; /* 统一高度 */
     overflow: hidden; /* 防止内容溢出 */
     padding: 30px; /* 边距 */
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
-    background: #FFFFFF;
+    background: #f4f4f4;
     border-radius: 20px;
     transition: box-shadow 0.1s ease-in-out;
     cursor: pointer;
@@ -579,6 +592,7 @@ $wordCount: 4; */
 
 .project-container:hover {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
 }
 
 .project-image-container {
@@ -1042,6 +1056,7 @@ $wordCount: 4; */
     .container-max1280 {
         max-width: 1280px;
         margin: auto;
+        width: 80%;
     }
 
     .projects-class {
@@ -1051,7 +1066,6 @@ $wordCount: 4; */
 
     .header-box {
         max-width: 1280px;
-        width: 100%;
     }
 
     .platform-container {
