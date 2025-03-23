@@ -350,6 +350,10 @@ header {
     .skill-title, .title {
         font-size: 3.6rem;
     }
+
+    .page2-container {
+        max-width: 1280px;
+    }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1727px){
@@ -364,6 +368,11 @@ header {
 
     .self-intro {
         gap: 34px;
+    }
+
+    .page2-container {
+        max-width: 1280px;
+        width: 100%;
     }
 }
 
@@ -383,5 +392,9 @@ header {
 
     .self-intro-container {
         gap: 100px
+    }
+    .page2-container {
+        max-width: 1280px;
+        width: 100%;
     }
 }
