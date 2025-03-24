@@ -763,9 +763,9 @@ $wordCount: 4; */
     display: inline-block;
 }
   
-.footer-email, .footer-linkdein {
+.footer-email, .footer-linkdein, .footer-behence {
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10px;
     cursor: pointer;
     pointer-events: auto;
 }
@@ -824,11 +824,9 @@ $wordCount: 4; */
     height: 26px;
 }
 
-.footer-linkdein a {
-    margin: 0;
-    padding: 0;
-    display: inline-block; /* Ensures the link doesn't affect the layout */
-    text-decoration: none;
+.footer-behence {
+    width: 42px;
+    height: 26px;
 }
 
 .footer-linkdein {
@@ -844,6 +842,14 @@ $wordCount: 4; */
 }
 
 .footer-email:hover {
+    opacity: 0.7;
+}
+
+.footer-behence {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-behence:hover {
     opacity: 0.7;
 }
 
@@ -1818,7 +1824,7 @@ $wordCount: 4; */
      }
 
      .row3-container {
-        gap: 60px;
+        gap: 40px;
      }
 
      .row1-container {
