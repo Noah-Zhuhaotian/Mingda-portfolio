@@ -27,9 +27,9 @@ async function animateEffect3(text) {
 
 // 轮播文本
 const texts = [
-    "Crafting intuitive experiences.",
-    "Designing business-driven solutions.",
-    "Turning complexity into clarity."
+    "Analysing requirements strategically.",
+    "Crafting empathetic, logical experience.",
+    "Creating practical, impactful solutions."
 ];
 
 let index = 0;
