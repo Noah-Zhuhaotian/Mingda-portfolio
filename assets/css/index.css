@@ -415,7 +415,7 @@ $wordCount: 4; */
     font-weight: 400;
     font-size: var(--header-word-size);
     line-height: 24px;
-    width: 180px;
+    width: 200px;
     height: 50px;
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
@@ -438,12 +438,15 @@ $wordCount: 4; */
     font-size: var(--header-word-size);
     line-height: 24px;
     height: 50px;
-    width: 180px;
+    width: 200px;
     text-align: center;
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
     background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .download_resume:hover {
@@ -458,8 +461,34 @@ $wordCount: 4; */
 .triangle-image {
     width: 9px;
     height: 11px;
-    margin-left: 8px; 
+    margin-left: 2px; 
 }
+
+.pulse-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000000; /* 可调 */
+    position: relative;
+    margin-left: 10px;
+    animation: pulse 0.9s ease-out infinite;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+    }
+    60% {
+      box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
 
 .overlay {
     display: none;
