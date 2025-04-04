@@ -81,38 +81,28 @@ body {
 
 
 .View-Prototype {
-    background: #000000;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 100px;
-    color: #FFFFFF;
+    color: #000000;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
     font-weight: 400;
-    font-family: var(--main-font);
-    font-size: 1.6rem;
+    font-size: var(--header-word-size);
+    line-height: 24px;
     height: 50px;
-    width: 230px;
+    width: 240px;
     text-align: center;
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    animation-name: shakebutton;
-    animation-duration: 1.5s; /* Change to speed up or slow down */
-    animation-iteration-count: infinite;
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .View-Prototype:hover {
-    background-color: #333;
-    color: #fff;
-    animation: none;
-}
-
-
-@keyframes shakebutton { 
-    10%, 90% { transform: translate3d(-2px, 0, 0); }
-    20%, 80% { transform: translate3d(+4px, 0, 0); }
-    30%, 70% { transform: translate3d(-8px, 0, 0); }
-    40%, 60% { transform: translate3d(+8px, 0, 0); }
-    50% { transform: translate3d(-10px, 0, 0); }
+    background-color: #ddd;
 }
 
 
@@ -531,7 +521,7 @@ body {
     .View-Prototype {
         font-size: 1.8rem;
         height: 60px;
-        width: 270px;
+        width: 260px;
     }
 
     .inside-project-paragraph, 
@@ -601,7 +591,7 @@ body {
     .View-Prototype {
         font-size: 1.8rem;
         height: 60px;
-        width: 280px;
+        width: 260px;
     }
 
     .inside-project-paragraph, 
