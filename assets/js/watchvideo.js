@@ -2,6 +2,7 @@ const videos_button = [
     ".repayment-video",
     ".loan-video",
     ".designsystem-video",
+    ".verification-video",
     ".sharepoint-video",
     ".inside9-video"
 ];
@@ -10,6 +11,7 @@ const videos_button = [
 const videoLinks = {
     ".repayment-video": "https://youtu.be/fraEIbTOkws",
     ".loan-video": "https://youtu.be/gFTCM0DA03E",
+    ".verification-video": "https://youtu.be/Yd73d0Ev3D0",
     ".designsystem-video": "https://youtu.be/aQNs5diGQBg",
     ".sharepoint-video": "https://youtu.be/cXNsjjkd7Nk",
     ".inside9-video": "https://youtu.be/_FHZHcRiZG8"

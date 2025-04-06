@@ -1196,8 +1196,8 @@ $wordCount: 4; */
 
 @media screen and (min-width: 1053px) and (max-width: 1280px) {
     .company-name, .project-introduction {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 22px;
     }
     .introduction p {
         line-height: 24px;

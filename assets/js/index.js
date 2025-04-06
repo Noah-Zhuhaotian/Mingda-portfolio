@@ -138,10 +138,10 @@ document.querySelectorAll(".project-container").forEach((container, index) => {
         const urls = [
             "/projects/Repayment.html",   
             "/projects/Loan.html",       
+            "/projects/Verification.html",
             "/projects/DesignSystem.html",
             "/projects/SharePoint.html",  
             "/projects/Inside9.html",     
-            "/projects/LoveStory.html" 
         ];
 
         let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/");
