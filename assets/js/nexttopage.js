@@ -1,10 +1,10 @@
 const pages = [
     "Repayment.html",
     "Loan.html",
+    "Verification.html",
     "DesignSystem.html",
     "SharePoint.html",
     "Inside9.html",
-    "LoveStory.html"
 ];
 
 // 获取当前页面的索引

@@ -127,6 +127,7 @@ body {
 .timeline-description-para-spec,
 .timeline-description-para-spec1,
 .timeline-description-para-spec2,
+.timeline-description-para-spec3,
 .keypage-title,
 .keypage-title1 {
     font-size: var(--project-paragraph-font);
@@ -150,10 +151,7 @@ body {
     gap: 6rem;
 }
 
-.timeline-description-title, 
-.timeline-description-para-spec
-.timeline-description-para-spec1
-.timeline-description-para-spec2 {
+.timeline-description-title {
     font-weight: 700;
 }
 
@@ -169,6 +167,10 @@ body {
     color: #724C9F;
 }
 
+.timeline-description-para-spec3 {
+    color: #006D75
+}
+
 .inside-project-container,  .inside-project-container3 {
     margin: 15rem 0 0 0;
 }
@@ -181,7 +183,8 @@ body {
 .container5-question,
 .loan-container5-question,
 .sharepoint-container5-question,
-.design-container5-question { 
+.design-container5-question,
+.verification-container5-question { 
     border-radius: 20px;
     display: flex;
     flex-direction: column; 
@@ -206,10 +209,15 @@ body {
     background: linear-gradient(90deg, #FF7875 0%, #FF4D4F 100%);
 }
 
+.verification-container5-question {
+    background: linear-gradient(90deg, #006D75 0%, #08979C 100%);
+}
+
 
 .container5-paragraph,
 .sharepoint-container5-paragraph2,
-.design-container5-paragraph {
+.design-container5-paragraph,
+.verification-container5-paragraph {
     display: inline;
     margin: 0;
     font-size: 2.8rem;
@@ -222,7 +230,8 @@ body {
 .sharepoint-container5-paragraph2:nth-child(2),
 .sharepoint-container5-paragraph2:nth-child(4),
 .design-container5-paragraph:nth-child(2),
-.container5-paragraph:nth-child(2)  {
+.container5-paragraph:nth-child(2),
+.verification-container5-paragraph:nth-child(2) {
     font-weight: 700;
 }
 
@@ -234,6 +243,12 @@ body {
     margin-top: 30px;
 }
 
+.keypages-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 30px;
+}
 
 .keypage-title {
     font-weight: 600;
@@ -320,6 +335,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 1.8rem;
@@ -385,6 +401,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 1.8rem;
@@ -415,7 +432,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 2rem;
     }
     .Loan-description-right {
@@ -431,7 +449,8 @@ body {
     .container5-question,
     .loan-container5-question,
     .sharepoint-container5-question,
-    .design-container5-question {
+    .design-container5-question,
+    .verification-container5-question {
         line-height: 2.3rem;
     }
 
@@ -468,6 +487,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 2.8rem;
@@ -479,7 +499,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 3.4rem;
         margin-right: 8px;
     }
@@ -530,6 +551,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 2.8rem;
@@ -542,13 +564,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
-        font-size: 3rem;
-    }
-
-    .container5-paragraph,
-    .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 3.6rem;
         margin-right: 8px;
     }
@@ -600,6 +617,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 3rem;
@@ -608,7 +626,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 4.2rem;
         margin-right: 6px;
     }
