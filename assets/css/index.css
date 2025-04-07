@@ -38,52 +38,48 @@
 }
 
 :root{
-    --header-word-size: 16px
+    --header-word-size: 16px;
 }
 
 html{
-    background: #eeeeee;
+    background: #FFFFFF;
     font-size: 10px;
 }
+
 li{
     list-style: none;
 }
+
 .root{
     width: 100%;
 }
 
-header {
-    width: 100%;
-    background: url('../images/banner.png');
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+
+
+
+
 
 .header-container {
-    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
     height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.75);
     z-index: 1000;
 }
 
-.header-box{
+
+.header-box {
     width: 80%;
-    height: 6rem;
-    margin: 0 auto;
+    height: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
 
-.logo {
-    margin-right: 4rem;
-
-}
 
 .autosign-image {
     width: 93px;
@@ -97,7 +93,15 @@ header {
     flex: auto;
 }
 
-.nav-list{
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-list {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -120,7 +124,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 3rem;
     white-space: nowrap;  /* Prevent text from wrapping */
     overflow: hidden; /* Optionally hide overflowing text */
     text-overflow: ellipsis; /* Optionally show ellipsis if text overflows */
@@ -183,6 +187,10 @@ header {
     font-weight: normal;
 }
 
+.button-box {
+    padding: 0 0 0 30px;
+}
+
 .send-email {
     background: #333;
     border: 1px solid #333;
@@ -216,38 +224,112 @@ header {
     display: none;
 }
 
+.page-container {
+    animation: expand 0.3s ease both; 
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .banner-text-container {
-    position: absolute;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/banner.png');
+    background-size: cover; /* 背景填满 container */
+    background-position: center; /* 居中显示背景 */
+    background-repeat: no-repeat; /* 防止背景重复 */
+    padding-top: 6rem;
 }
+
+
+
+.slogan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; /* 自动适应内容高度 */
+    overflow: hidden;
+}
+
 
 .slogan {
-    margin: 1.5rem 0 3.5rem;
+    font-size: 36px;
     font-family: 'Albert Sans', sans-serif;
     color: #FFFFFF;
-    line-height: 4rem;
-    font-size: 28px;
-    font-weight: 200;
-}
+    text-align: center;
+    white-space: nowrap; /* 强制单行 */
+    position: relative;
+} 
 
-.greeting-container {
-    position: absolute;
+/* .slogan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: #FFFFFF;
-    bottom: 0;
+    height: 100%;
+} */
 
+
+/* .slogan {
+    font-size: 36px;
+    font-family: 'Albert Sans', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+}   */
+
+/* .slogan span {
+    font-weight: 700;
+    color: #CAEA00;
+    position: relative;
 }
+
+.slogan span::before {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #CAEA00;
+  
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    animation: blink .7s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+.slogan span.stop-blinking::before {
+    animation: none;
+} */
+
+/* $speed: 8s;
+$wordCount: 4; */
+
+
+
+
 
 
 .greeting {
+    margin-top: 50px;
     display: flex; /* Aligns the elements in a row */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
     gap: 10px; /* Adds space between the elements */
-    margin-top: 50px; /* Adjusts top margin to give some space from the top of the page */
+
+
 }
   
 .shake-image {
@@ -313,43 +395,13 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 120%;
+    line-height: 24px;
     color: #11100E;
     max-width: 550px;
 }
 
-.platform-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-    gap: 20px; /* Spacing between items */
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Albert Sans', sans-serif;
-    margin-top: 30px;
-}
-
-.platform {
-    height: 80px;
-    padding: 30px;
-    border-radius: 8px;
-    background: #F4F4F4;
-    border-radius: 20px;
-}
-
-.platform span:first-child {
-    font-weight: regular;
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.platform span:last-child {
-    font-size: 1.5rem;
-    color: #999;
-}
-
 .button-container {
+    position: relative;
     display: flex; /* Aligns the elements in a row */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
@@ -363,7 +415,7 @@ header {
     font-weight: 400;
     font-size: var(--header-word-size);
     line-height: 24px;
-    width: 180px;
+    width: 200px;
     height: 50px;
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
@@ -373,6 +425,7 @@ header {
     color: #FFFFFF;
     cursor: pointer;
 }
+
 
 
 .watchvideo {
@@ -385,11 +438,15 @@ header {
     font-size: var(--header-word-size);
     line-height: 24px;
     height: 50px;
-    width: 180px;
+    width: 200px;
     text-align: center;
     align-items: center;
-    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    transition: background-color 0.3s ease;
     cursor: pointer;
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .download_resume:hover {
@@ -404,8 +461,103 @@ header {
 .triangle-image {
     width: 9px;
     height: 11px;
-    margin-left: 8px; 
+    margin-left: 2px; 
 }
+
+.pulse-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000000; /* 可调 */
+    position: relative;
+    margin-left: 10px;
+    animation: pulse 0.9s ease-out infinite;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+    }
+    60% {
+      box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+  }
+
+.video-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    z-index: 1000;
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+  
+#myVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 20px;
+    /* padding: 5px 10px; */
+    width: 40px;  /* 设置宽度 */
+    height: 40px; /* 设置高度，确保是正圆 */
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0; /* 让内容垂直居中 */
+}
+
+/* 重新播放按钮（居中） */
+.replay-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none; /* 默认隐藏 */
+}
+
 
 .text-container {
     display: flex; /* Aligns the elements in a row */
@@ -422,6 +574,10 @@ header {
     font-size: 40px;
     line-height: 58px;
     color: #11100E;
+}
+
+.page1-project-container {
+    margin-top: 60px;
 }
 
 
@@ -445,15 +601,16 @@ header {
 .projects-class {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 两列布局 */
-    gap: 40px; /* 控制 container 之间的间距 */
+    gap: 60px; /* 控制 container 之间的间距 */
     width: 80%; /* 控制 container 的宽度 */
-    margin: 20px auto; /* 居中整个 section */
+    margin: 40px auto; /* 居中整个 section */
     padding: 20px;
 }
 
 .project-container {
     display: flex;
     flex-direction: column;
+    /* border: 2px solid #CCCCCC; */
     width: 100%;
     height: auto; /* 统一高度 */
     overflow: hidden; /* 防止内容溢出 */
@@ -461,13 +618,13 @@ header {
     box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
     background: #f4f4f4;
     border-radius: 20px;
-    transition: background 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
     cursor: pointer;
 }
 
 .project-container:hover {
-    background: #FFFFFF; 
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
 }
 
 .project-image-container {
@@ -475,7 +632,10 @@ header {
     height: 0;
     padding-bottom: 100%; /* Makes the image container square by using padding trick */
     position: relative;
+
 }
+
+
 
 .project-image {
     position: absolute;
@@ -486,6 +646,7 @@ header {
     object-fit: cover; /* Ensures the image covers the container without distortion */
     border-radius: 10px;
 }
+
 
 .project-text-container {
     width: 100%;
@@ -510,7 +671,8 @@ header {
 }
 
 .company-name, .project-introduction {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .project-title {
@@ -521,6 +683,60 @@ header {
     height: 43px;
 }
 
+.platform-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 80px auto 150px auto;
+}
+
+.platform-exter-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.platform-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.platform-inner-title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-title {
+    font-size: 36px;
+}
+
+.platform-inner-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.platform-content {
+    font-weight: 400;
+    font-size: 16px;
+    color: #5A5A5A;
+    line-height: 2.2rem;
+}
+
+.platform-title,
+.platform-inner-title,
+.platform-content {
+    font-family: 'Albert Sans', sans-serif;;
+}
 
 
 .footer-class {
@@ -544,16 +760,14 @@ header {
     width: 85%;
     display: flex;
     justify-content: space-between;
-    /* height: 50px; */
+
 }
   
 .footer-r1 {
-    /* top: 20%; */
     align-items: center;
     justify-content: space-between;
     position: absolute;
     margin-bottom: 70px;
-    /* padding: 30 0 0 0; */
 }
 
 
@@ -578,17 +792,16 @@ header {
     display: inline-block;
 }
   
-.footer-email, .footer-linkdein {
+.footer-email, .footer-linkdein, .footer-behence {
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10px;
     cursor: pointer;
+    pointer-events: auto;
 }
   
 .footer-r2 {
-    /* bottom: 10%; */
     align-items: center;
     justify-content: space-between;
-    /* margin-bottom: 40px; */
     position: absolute;
     margin-top: 60px;
     height: 50px;
@@ -640,11 +853,9 @@ header {
     height: 26px;
 }
 
-.footer-linkdein a {
-    margin: 0;
-    padding: 0;
-    display: inline-block; /* Ensures the link doesn't affect the layout */
-    text-decoration: none;
+.footer-behence {
+    width: 42px;
+    height: 26px;
 }
 
 .footer-linkdein {
@@ -660,6 +871,14 @@ header {
 }
 
 .footer-email:hover {
+    opacity: 0.7;
+}
+
+.footer-behence {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-behence:hover {
     opacity: 0.7;
 }
 
@@ -690,11 +909,16 @@ header {
     height: 90%;
 }
 
+
+.mobile-platform-container {
+    display: none;
+}
+
+.footer-mobile-container {
+    display: none;
+}
+
 @media (min-width: 1750px){
-    .banner-text-container {
-        top: 24%; 
-        max-width: 100%;
-    }
 
     .slogan {
         font-size: 4.5rem; 
@@ -716,9 +940,9 @@ header {
 
     .introduction p {
         font-size: 2.4rem;
-        max-width: 870px;
-        line-height: 3.2rem;
-        margin-top: 15px;
+        max-width: 700px;
+        line-height: 3.4rem;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
 
@@ -738,11 +962,6 @@ header {
         font-size: 40px;
     }
 
-    .cr1, .cr2 {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
 
     .footer-r2 {
         height: 60px;
@@ -752,20 +971,167 @@ header {
         font-size: 36px;
     }
 
-    .project-introduction {
-        font-size: 20px;
+    .company-name, .project-introduction {
+        font-size: 22px;
+        line-height: 30px;
     }
 
     .project-text-container {
         margin: 10px;
     }
+
+    .platform-title,
+    .project
+     {
+        font-size: 40px;
+    }
+    
+    .platform-inner-title {
+        font-size: 24px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+        line-height: 2.8rem;
+    }
+
+    .project-container {
+        padding: 40px;
+    }
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+        width: 100%;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1749px) {
+    .slogan {
+        font-size: 4rem; 
+        line-height: 5.8rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 700px;
+        line-height: 3.2rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    .c1 {
+        font-size: 40px;
+    }
+
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+    .platform-title,
+    .project {
+        font-size: 38px;
+    }
+    
+    .platform-inner-title {
+        font-size: 22px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+    }
+
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+        width: 80%;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+
 }
 
 
-@media screen and (min-width: 1281px) and (max-width: 1749px) {
-    .banner-text-container {
-        top: 24%;
-    }
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
 
     .slogan {
         font-size: 4rem; 
@@ -787,7 +1153,7 @@ header {
 
     .introduction p {
         font-size: 2.4rem;
-        max-width: 870px;
+        max-width: 700px;
         line-height: 3.2rem;
         margin-top: 15px;
         margin-bottom: 50px;
@@ -799,7 +1165,7 @@ header {
     }
 
     .cr1, .cr2 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 28px;
     }
 
@@ -808,593 +1174,842 @@ header {
         height: 60px;
     }
 
-}
-
-
-@media screen and (min-width: 1151px) and (max-width: 1280px) {
-    .banner-text-container {
-        top: 26%;
-    }
-
-
-
-
-}
-
-
-
-@media screen and (min-width: 834px) and (max-width: 1151px) {
-    header{
-        background: url(../images/banner1024.png);
-        height: 43vh;
-    }
-    .banner-text-container {
-        top: 26%;
-    }
-
-
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .banner-text-container {
-        top: 26%;
-    }
-
-   .header-box {
-       width: 90%;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-   }
-   .content{
-       width: 90%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
-    }
-
-   .header-box{
-       width: 90%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-
-    .list-item:last-child {
-       border-bottom: none;
-   }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-        top: 20%;
-        width: 90%;
-   }
-    .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
-    }
-
-    .page1-project-container {
-        margin-top: 40px;
+    .platform-title,
+    .project {
+        font-size: 38px;
     }
     
-    .selected {
-        top: 20px;
-    }
-
-    .project{
-        font-size: 30px;
-    }
-
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
-        padding: 10px 0px;
-    }
-
-    .project-text-container {
-        margin-bottom: 20px;
-    }
-
-    .platform-container {
-        display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
-
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
+    .platform-inner-title {
+        font-size: 22px;
     }
     
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
+    .platform-content {
+        font-size: 18px;
     }
 
-    .footer-class {
-        position: absolute;
-        margin-top: 50px;
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
     }
 
-    .footer-image {
-        display: none;
+}
+
+@media screen and (min-width: 1053px) and (max-width: 1280px) {
+    .company-name, .project-introduction {
+        font-size: 16px;
+        line-height: 22px;
     }
-
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 10px;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-
-    }
-
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
-        gap: 20px;
-    }
-
     .introduction p {
-        width: 85%;
+        line-height: 24px;
     }
-
-    .nav__link::before {
-        display: none;
-    }
-    
-    .nav__link:hover::before {
-        display: none;
-    }
-
-    .back-to-top {
-        right: 1rem;
-        bottom: 10rem;
-    }
-
 }
 
 
-@media screen and (max-width: 414px){
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
+@media screen and (min-width: 769px) and (max-width: 992px) {  
+    .content{
+        width: 80%;
     }
-
-   .header-box{
-       width: 90%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-    
-   .list-item:last-child {
-       border-bottom: none;
-   }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-        top: 20%;
-        width: 90%;
-   }
-    .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
-    }
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
-    }
-
-    .platform-container {
+ 
+ 
+    .main-nav-item{
         display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
-
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
-    }
-
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
-    .footer-class {
         position: absolute;
-        margin-top: 50px;
+        width: 10rem;
+        right: 3rem;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
     }
-
-    .footer-image {
-        display: none;
-    }
-
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-
-    }
-
-    .footer-r1, .footer-r2 {
+    .nav-main-list{
         width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
     }
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
     }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .introduction p {
-        width: 85%;
-    }
-
-}
-
-
-@media screen and (max-width: 375px){
-
-    header{
-        background-attachment: scroll; /* Disable fixed background for mobile */
-        height: 30vh; /* Adjust the height for better visibility on smaller screens */
-        background-position: center;
-    }
-
-   .header-box{
-       width: 90%;
-       position: relative;
-   }
-   .logo{
-       min-width: 160px;
-       margin-right: 2rem;
-   }
-   .button-box{
-       padding: 0 2rem;
-       font-size: 1.5rem;
-   }
-   .content{
-       width: 80%;
-   }
-   .list-item{
-       padding: 0 1.5rem;
-   } 
-
-   /* 手机端样式 */
-   .main-nav-item{
-       display: none;
-       position: absolute;
-       width: 10rem;
-       right: 0;
-       top: 6.5rem;
-       border-radius: .5rem;
-   }
-   .nav-main-list{
-       width: 100%;
-       background: #000000;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       border-radius: .5rem;
-   }
-   .list-item{
-       width: 100%;
-       margin: 0 1rem;
-       border-bottom: 1px solid #FFFFFF;
-   }
-
+     
     .list-item:last-child {
         border-bottom: none;
     }
-
-   .phone-show{
-       display: flex;
-       height: 60px;
-       width: 60px;
-       justify-content: center; /* Center horizontally */
-       align-items: center;     /* Center vertically */
-   }
-   .nav-btn{
-       height: 60%;
-       width: 60%;
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       justify-content: space-around;
-   }
-   .nav-btn span{
-       display: inline-block;
-       height: 4px;
-       width: 40px;
-       background: #FFFFFF;
-   }
-   .banner-text-container {
-        top: 20%;
-        width: 90%;
-   }
-    .slogan {
-        font-size: 2rem;
-        line-height: 2.5rem;
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: flex-end; 
+        align-items: center;
     }
-
-    .hi {
-        font-size: 2.8rem;
-        line-height: 2.5rem;
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
-    .projects-class {
-        grid-template-columns: 1fr; /* 一列布局 */
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
     }
-
-    .platform-container {
+ 
+     .hi {
+         font-size: 2.8rem;
+         line-height: 2.5rem;
+     }
+     .projects-class {
+         grid-template-columns: 1fr; 
+     }
+ 
+     .platform-container {
+         display: none;
+     }
+     .text {
+         font-size: 2.3rem;
+         line-height: 2.5rem;
+     }
+ 
+     .button-container {
+         display: grid;
+         grid-template-columns: 1fr;
+         margin: 0 50%; 
+     }
+ 
+ 
+     .footer-class {
         display: none;
-    }
-    .text {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
+     }
 
-    .button-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0 50%; /* 居中整个 section */
-    }
-
-    footer {
-        min-height: 120px; /* 适配手机端更高 */
-        background: #000000;
-    }
-
-    .footer-class {
-        position: absolute;
-        margin-top: 50px;
-    }
-
-    .footer-image {
-        display: none;
-    }
-
-    .c1 {
-        font-size: 20px;
-    }
-
-    .footer-r1{
-        margin-bottom: 20px;
-    }
-
-    .footer-r2 {
-        display: none;
-    }
-
-    .footer-r1, .footer-r2 {
-        width: 100%;
-    }
-
-    .cr2 {
-        text-align: center;
-        margin-right: 0px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .footer-signauto {
-        width: 85px;
-        height: 30px;
-    }
-
-    .cr1 {
-        display: none;
-    }
-
-    .left-group {
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .right-group {
-        justify-content: center;
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
         gap: 20px;
+        justify-content: center;
+        align-items: center; 
+     }
+
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 60px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 16px;
+
+     }
+
+     .row4 {
+        font-size: 14px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
+ 
+     .introduction p {
+         width: 85%;
+         line-height: 130%;
+     }
+
+     .back-to-top {
+         right: 1rem;
+         bottom: 10rem;
+     }
+     .slogan {
+        white-space: wrap;
+        width: 90%;
+     }
+
+     .mobile-platform-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        width: 80%;
+        margin: 80px auto 100px auto;
     }
 
-    .introduction p {
-        width: 85%;
+    .platform-title-container {
+        margin-bottom: 30px;
+        text-align: center; 
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
     }
+
+    .platform-title {
+        font-size: 28px;
+        margin: 0 auto
+    }
+
+    .platform {
+        border: 1px solid #CCCC;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .platform-inner-title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background: #FFFFFF;
+    }
+    .platform-inner-title {
+        font-weight: 400;
+    }
+
+    .platform-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .platform-content-container {
+        padding: 10px;
+        display: none;
+        margin: 0 20px 20px 20px;
+    }
+
+
+    .platform.active .platform-content-container {
+        display: block; 
+    }
+
+    .platform-inner-title-container::after {
+        content: "";
+        margin-left: auto;
+        margin-right: 10px;
+        width: 13px;
+        height: 14px;
+        background-image: url('../images/collapse.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+
+    }
+    
+    .platform.active .platform-inner-title-container::after {
+        transform: rotate(180deg);
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-text-container {
+        padding: 10px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .project-container:hover {
+        transform: none;
+    }
+
+
+}
+
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+   .content{
+        width: 80%;
+    }
+ 
+ 
+    .main-nav-item{
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
+    }
+    .nav-main-list{
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+     
+    .list-item:last-child {
+        border-bottom: none;
+    }
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: flex-end; 
+        align-items: center;
+    }
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
+    }
+ 
+     .hi {
+         font-size: 2.8rem;
+         line-height: 2.5rem;
+     }
+     .projects-class {
+         grid-template-columns: 1fr; 
+     }
+ 
+     .platform-container {
+         display: none;
+     }
+     .text {
+         font-size: 2.3rem;
+         line-height: 2.5rem;
+     }
+ 
+     .button-container {
+         display: grid;
+         grid-template-columns: 1fr;
+         margin: 0 50%; 
+     }
+ 
+ 
+     .footer-class {
+        display: none;
+     }
+
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
+        gap: 20px;
+        justify-content: center;
+        align-items: center; 
+     }
+
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 60px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 16px;
+
+     }
+
+     .row4 {
+        font-size: 14px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
+ 
+     .introduction p {
+         width: 85%;
+         line-height: 130%;
+     }
+
+     .back-to-top {
+         right: 1rem;
+         bottom: 10rem;
+     }
+     .slogan {
+        white-space: wrap;
+        width: 90%;
+     }
+
+     .mobile-platform-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        width: 80%;
+        margin: 80px auto 100px auto;
+    }
+
+    .platform-title-container {
+        margin-bottom: 30px;
+        text-align: center; 
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .platform-title {
+        font-size: 28px;
+        margin: 0 auto
+    }
+
+    .platform {
+        border: 1px solid #CCCC;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .platform-inner-title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background: #FFFFFF;
+    }
+    .platform-inner-title {
+        font-weight: 400;
+    }
+
+    .platform-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .platform-content-container {
+        padding: 10px;
+        display: none;
+        margin: 0 20px 20px 20px;
+    }
+
+    .platform.active .platform-content-container {
+        display: block; 
+    }
+
+    .platform-inner-title-container::after {
+        content: "";
+        margin-left: auto;
+        margin-right: 10px;
+        width: 13px;
+        height: 14px;
+        background-image: url('../images/collapse.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+
+    }
+    
+    .platform.active .platform-inner-title-container::after {
+        transform: rotate(180deg);
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-text-container {
+        padding: 20px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-container:hover {
+        transform: none;
+    }
+
+    .project-container {
+        padding: 20px;
+    }
+
+    .project-text-container {
+        margin-top: 0;
+        height: 30%;
+    }
+}
+
+
+@media screen and (max-width: 413px) {
+    .content{
+        width: 80%;
+    }
+ 
+ 
+    .main-nav-item{
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
+    }
+    .nav-main-list{
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item{
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+     
+    .list-item:last-child {
+        border-bottom: none;
+    }
+ 
+    .phone-show{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: flex-end; 
+        align-items: center;
+    }
+    .nav-btn{
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span{
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
+    }
+ 
+     .hi {
+         font-size: 2.8rem;
+         line-height: 2.5rem;
+     }
+     .projects-class {
+         grid-template-columns: 1fr; 
+     }
+ 
+     .platform-container {
+         display: none;
+     }
+     .text {
+         font-size: 2.3rem;
+         line-height: 2.5rem;
+     }
+ 
+     .button-container {
+         display: grid;
+         grid-template-columns: 1fr;
+         margin: 0 50%; 
+     }
+ 
+ 
+     .footer-class {
+        display: none;
+     }
+
+     .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover; /* 背景填满 container */
+        background-position: center; /* 居中显示背景 */
+        background-repeat: no-repeat; /* 防止背景重复 */
+        gap: 20px;
+        justify-content: center;
+        align-items: center; 
+     }
+
+     .row1-container,
+     .row3-container
+      {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+     }
+
+     .row3-container {
+        gap: 40px;
+     }
+
+     .row1-container {
+        gap: 10px;
+     }
+
+     .row2-container,
+     .row4-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+     }
+
+     .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+     }
+
+     .row1 {
+        font-size: 26px;
+        font-weight: 700;
+     }
+
+     .row2
+    {
+        font-size: 14px;
+
+     }
+
+     .row4 {
+        font-size: 12px;
+     }
+
+     .footer-email {
+        width: 40px;
+        height: 30px;
+     }
+
+     .footer-linkdein {
+        width: 30px;
+        height: 30px;
+     }
+ 
+     .introduction p {
+         width: 85%;
+         line-height: 130%;
+     }
+
+     .back-to-top {
+         right: 1rem;
+         bottom: 10rem;
+     }
+     .slogan {
+        white-space: wrap;
+        width: 90%;
+     }
+
+     .mobile-platform-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        width: 80%;
+        margin: 80px auto 100px auto;
+    }
+
+    .platform-title-container {
+        margin-bottom: 30px;
+        text-align: center; 
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .platform-title {
+        font-size: 28px;
+        margin: 0 auto
+    }
+
+    .platform {
+        border: 1px solid #CCCC;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .platform-inner-title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background: #FFFFFF;
+    }
+    .platform-inner-title {
+        font-weight: 400;
+    }
+
+    .platform-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .platform-content-container {
+        padding: 10px;
+        display: none;
+        margin: 0 20px 20px 20px;
+    }
+
+    .platform.active .platform-content-container {
+        display: block; 
+    }
+
+    .platform-inner-title-container::after {
+        content: "";
+        margin-left: auto;
+        margin-right: 10px;
+        width: 13px;
+        height: 14px;
+        background-image: url('../images/collapse.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+
+    }
+    
+    .platform.active .platform-inner-title-container::after {
+        transform: rotate(180deg);
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-text-container {
+        padding: 20px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-container:hover {
+        transform: none;
+    }
+    .project-container {
+        padding: 20px;
+    }
+
 }

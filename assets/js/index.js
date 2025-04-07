@@ -117,11 +117,20 @@ document.querySelectorAll(".send-email, .footer-email").forEach(function(element
   
 
 //跳转linkedin
-document.querySelector(".footer-linkdein").addEventListener("click", function () {
-      window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
+document.addEventListener("DOMContentLoaded", function (){
+  document.querySelector(".footer-linkdein").addEventListener("click", function () {
+    window.open("https://www.linkedin.com/in/mingda-lin/", "_blank");
 });
-  
-  
+});
+
+document.addEventListener("DOMContentLoaded", function (){
+  document.querySelector(".footer-behence").addEventListener("click", function () {
+    window.open("https://www.behance.net/mingdalin", "_blank");
+});
+});
+
+
+
 
 //projects卡片点击进入对应的project
 document.querySelectorAll(".project-container").forEach((container, index) => {
@@ -129,10 +138,10 @@ document.querySelectorAll(".project-container").forEach((container, index) => {
         const urls = [
             "/projects/Repayment.html",   
             "/projects/Loan.html",       
+            "/projects/Verification.html",
             "/projects/DesignSystem.html",
             "/projects/SharePoint.html",  
             "/projects/Inside9.html",     
-            "/projects/LoveStory.html" 
         ];
 
         let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/");

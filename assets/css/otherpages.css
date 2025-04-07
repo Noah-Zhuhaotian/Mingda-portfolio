@@ -8,14 +8,26 @@ header {
     position: relative;
     width: 100%;
     margin: 30px auto; 
-    height: auto;  
+    height: auto; 
+    animation: expand 1s ease both; 
 }
 
 .page2-container {
     width: 80%;
     height: auto;
     position: relative;
-    margin: 50px auto; 
+    margin: 80px auto; 
+    transform-origin: top;
+    animation: expand 1s ease both;
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
  
 .name-container {
@@ -30,16 +42,30 @@ header {
 .self-intro-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    gap: 40px;
+    margin-top: 30px;
+    gap: 60px;
+    width: 100%;
+}
+
+.self-intro {
+    flex: 1; /* 让自我介绍部分占 50% 宽度 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.self-image-container {
+    flex: 1; /* 让图片部分占 50% 宽度 */
 }
 
 .self-image {
-    width: 400px;
-    height: 400px;
+    width: 100%; /* 使图片的宽度自适应容器 */
+    height: auto; /* 保持图片的纵横比 */
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
 }
 
-.intro {
+
+.paragraph {
     font-family: 'Albert Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -66,18 +92,25 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 159px;
-    gap: 40px;
+    margin-bottom: 150px;
+    gap: 80px;
+    width: 100%;
 }
 
 .skill-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .third-box-right {
     display: flex;
     flex-direction: column; /* 让子元素上下排列 */
     gap: 80px; /* 控制 skill-container 和 moreintro-container 之间的间距 */
+    flex: 1; 
+}
+
+.third-box-left {
+    flex: 1;
 }
 
 .skill-box {
@@ -104,7 +137,9 @@ header {
 }
 
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 767px) {
     .projects-page-container {
         top: 40px;
         margin-bottom: 60px;
@@ -119,27 +154,18 @@ header {
         align-items: center;
     }
 
-    .self-image {
-        width: 320px;
-        height: 320px;
-    }
 
-    .intro {
-        font-size: 16px;
+    .paragraph,
+    .moreintor 
+    {
+        font-size: 18px;
+        line-height: 2.6rem;
     }
 
     .third-container {
         flex-direction: column;
         align-items: center;
     }
-
-    /* .skill-box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px, 10px;
-        justify-content: center;
-        align-items: center;
-    } */
 
     .skill-box {
         gap: 1rem;
@@ -156,52 +182,218 @@ header {
     }
 }
 
+@media screen and (width: 768px) {
+    .projects-page-container {
+        top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .page2-container{
+        margin: 50px auto;
+    }
+
+    .self-intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
-@media screen and (min-width: 922px) and (max-width: 1151px) {
-    .intro, .moreintor {
+    .paragraph,
+    .moreintor 
+    {
+        font-size: 18px;
+        line-height: 2.6rem;
+    }
+
+    .third-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        gap: 1rem;
+    }
+
+    .skill-image {
+        width: 8rem;
+        height: 8rem;
+
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 922px) {
+    .projects-page-container {
+        top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .page2-container{
+        margin: 50px auto;
+    }
+
+    .self-intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .paragraph,
+    .moreintor 
+    {
+        font-size: 18px;
+        line-height: 2.6rem;
+    }
+
+    .third-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        gap: 1rem;
+    }
+
+    .skill-image {
+        width: 8rem;
+        height: 8rem;
+
+    }
+}
+
+
+@media screen and (min-width: 922px) and (max-width: 1023px) {
+    .paragraph, .moreintor {
         font-size: 1.4rem;
         line-height: 2.0rem;
+    }
+    .skill-box {
+        gap: 1rem;
+    }
+
+    .skill-image {
+        width: 4rem;
+        height: 4rem;
+
+    }
+}
+
+@media screen and (width: 1024px) {
+    .paragraph, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    }
+
+    .skill-box {
+        gap: 1.4rem;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1146px){
+    .paragraph, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    }
+    .skill-box {
+        gap: 1.4rem;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1047px) and (max-width: 1151px) {
+    .paragraph, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+
+    .self-intro {
+        gap: 16px;
     }
 }
 
 @media screen and (min-width: 1153px) and (max-width: 1280px) {
-    .intro, .moreintor {
+    .paragraph, .moreintor {
         font-size: 1.8rem;
-        line-height: 2.4rem;
+        line-height: 2.5rem;
     }
+
+    .self-intro {
+        gap: 18px;
+    }
+
+
 }
 
 
 @media screen and (min-width: 1281px) and (max-width: 1440px) {
-    .intro, .moreintor {
-        font-size: 2.0rem;
-        line-height: 2.4rem;
+    .paragraph, .moreintor {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    
+    .self-intro {
+        gap: 42px;
     }
 
     .skill-title, .title {
         font-size: 3.6rem;
+    }
+
+    .page2-container {
+        max-width: 1280px;
     }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1727px){
-    .intro, .moreintor {
-        font-size: 2.0rem;
-        line-height: 2.6rem;
+    .paragraph, .moreintor {
+        font-size: 2.2rem;
+        line-height: 3rem;
     }
 
     .skill-title, .title {
         font-size: 3.6rem;
+    }
+
+    .self-intro {
+        gap: 34px;
+    }
+
+    .page2-container {
+        max-width: 1280px;
     }
 }
 
 @media screen and (min-width: 1728px){
-    .intro, .moreintor {
+    .paragraph, .moreintor {
         font-size: 2.2rem;
-        line-height: 2.8rem;
+        line-height: 3.2rem;
     }
 
     .skill-title, .title {
         font-size: 3.6rem;
+    }
+
+    .self-intro {
+        gap: 40px;
+    }
+
+    .self-intro-container {
+        gap: 100px
+    }
+    .page2-container {
+        max-width: 1280px;
+        width: 100%;
     }
 }

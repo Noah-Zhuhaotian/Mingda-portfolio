@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--main-font);
-
 }
 
 
@@ -33,7 +32,7 @@ body {
     border-radius: 200px;
     font-size: 18px;
     /* border: 2px solid #B2B2B2; */
-    background: #FFFFFF;
+    background: #f4f4f4;
     color: #5A5A5A;
 }
 
@@ -42,10 +41,18 @@ body {
     width: 80%;
     display: flex;
     flex-direction: column; 
-    align-items: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    margin: var(--project-part1-distance) auto
+    justify-content: center;
+    margin: var(--project-part1-distance) auto;
+    animation: expand 1s ease both; 
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .project-inside-image {
@@ -53,32 +60,52 @@ body {
     width: 100%;
 }
 
+.project-inside-cover-container {
+    width: 100%;
+    background-color: #f0f0f0; /* 占位背景色 */
+    border-radius: 20px;
+}
+
+.project-inside-image-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
 .inside-button-container {
-    margin: 20px;
+    margin: 30px;
     display: flex;
     justify-content: center;
 }
 
+
 .View-Prototype {
-    background: #000000;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #000000;
     border-radius: 100px;
-    color: #FFFFFF;
+    color: #000000;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: var(--header-word-size);
+    line-height: 24px;
     height: 50px;
-    width: 180px;
+    width: 240px;
     text-align: center;
     align-items: center;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .View-Prototype:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #ddd;
 }
+
+
 
 .inside-project-container2{
     margin: 5rem 0 0 0;
@@ -90,7 +117,8 @@ body {
 .inside-project-container6 {
     display: flex;
     flex-direction: column;
-    gap: 2rem; 
+    gap: 3rem;
+    line-height: 3rem;
 }
 
 .inside-project-paragraph, 
@@ -99,6 +127,7 @@ body {
 .timeline-description-para-spec,
 .timeline-description-para-spec1,
 .timeline-description-para-spec2,
+.timeline-description-para-spec3,
 .keypage-title,
 .keypage-title1 {
     font-size: var(--project-paragraph-font);
@@ -122,10 +151,7 @@ body {
     gap: 6rem;
 }
 
-.timeline-description-title, 
-.timeline-description-para-spec
-.timeline-description-para-spec1
-.timeline-description-para-spec2 {
+.timeline-description-title {
     font-weight: 700;
 }
 
@@ -134,15 +160,19 @@ body {
 }
 
 .timeline-description-para-spec1 {
-    color: #E65744;
+    color: #FF4D4F;
 }
 
 .timeline-description-para-spec2 {
     color: #724C9F;
 }
 
+.timeline-description-para-spec3 {
+    color: #006D75
+}
+
 .inside-project-container,  .inside-project-container3 {
-    margin: 8rem 0 0 0;
+    margin: 15rem 0 0 0;
 }
 
 .inside-project-title2 {
@@ -153,7 +183,8 @@ body {
 .container5-question,
 .loan-container5-question,
 .sharepoint-container5-question,
-.design-container5-question { 
+.design-container5-question,
+.verification-container5-question { 
     border-radius: 20px;
     display: flex;
     flex-direction: column; 
@@ -178,10 +209,15 @@ body {
     background: linear-gradient(90deg, #FF7875 0%, #FF4D4F 100%);
 }
 
+.verification-container5-question {
+    background: linear-gradient(90deg, #006D75 0%, #08979C 100%);
+}
+
 
 .container5-paragraph,
 .sharepoint-container5-paragraph2,
-.design-container5-paragraph {
+.design-container5-paragraph,
+.verification-container5-paragraph {
     display: inline;
     margin: 0;
     font-size: 2.8rem;
@@ -194,7 +230,8 @@ body {
 .sharepoint-container5-paragraph2:nth-child(2),
 .sharepoint-container5-paragraph2:nth-child(4),
 .design-container5-paragraph:nth-child(2),
-.container5-paragraph:nth-child(2)  {
+.container5-paragraph:nth-child(2),
+.verification-container5-paragraph:nth-child(2) {
     font-weight: 700;
 }
 
@@ -206,6 +243,12 @@ body {
     margin-top: 30px;
 }
 
+.keypages-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 30px;
+}
 
 .keypage-title {
     font-weight: 600;
@@ -223,30 +266,47 @@ body {
     display: block;
 }
 
+
+
 .nav-to-page1 {
     justify-content: flex-end;
 }
 
 .nav-to-page1, .nav-to-page2 {
     display: flex;
-    width: 100%;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
     position: relative;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 80px;
+    cursor: pointer;
 }
 
 .nav-to-page2 {
     justify-content: space-between;
 }
 
+.arrow-image {
+    width: 18px;
+    height: auto;
+}
+
+.nexttopage-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .next-page, .prev-page {
     color: #2C2C2C;
     font-size: 20px;
-    font-weight: bold;
 }
 
-.next-page:hover, .prev-page:hover {
+#prev-page,
+#next-page {
+    transition: opacity 0.3s ease;
+}
+
+#prev-page:hover,
+#next-page:hover {
     opacity: 0.7;
 }
 
@@ -275,6 +335,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 1.8rem;
@@ -313,16 +374,25 @@ body {
         display: none;
     }
 
+    .inside-project-container, .inside-project-container3 {
+        margin: 10rem 0 0 0;
+    }
+
     .project-inside-container1 {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .inside-project-title {
         font-size: 3rem;
+        line-height: 3.5rem;
     }
 
     .timeline-description-container {
         gap: 8rem;
+    }
+
+    .inside-project-paragraph {
+        line-height: 2.5rem;
     }
 
     .inside-project-paragraph, 
@@ -331,6 +401,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 1.8rem;
@@ -361,7 +432,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 2rem;
     }
     .Loan-description-right {
@@ -373,6 +445,24 @@ body {
     .lovestory-photo-container{
         gap: 10px 10px;
     }
+
+    .container5-question,
+    .loan-container5-question,
+    .sharepoint-container5-question,
+    .design-container5-question,
+    .verification-container5-question {
+        line-height: 2.3rem;
+    }
+
+
+    
+    .title-container, 
+    .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        gap: 1.5rem;
+    }
+
 }
 
 
@@ -388,7 +478,7 @@ body {
     .View-Prototype {
         font-size: 1.8rem;
         height: 60px;
-        width: 220px;
+        width: 260px;
     }
 
     .inside-project-paragraph, 
@@ -397,6 +487,7 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 2.8rem;
@@ -408,7 +499,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 3.4rem;
         margin-right: 8px;
     }
@@ -421,14 +513,18 @@ body {
     }
 
     .inside-project-container,  .inside-project-container3 {
-        margin: 10rem 0 0 0;
+        margin: 18rem 0 0 0;
     }
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
-        gap: 3rem;
+        gap: 4rem;
+    }
+
+    .inside-project-page {
+        max-width: 1280px;
     }
 
 }
@@ -446,7 +542,7 @@ body {
     .View-Prototype {
         font-size: 1.8rem;
         height: 60px;
-        width: 220px;
+        width: 260px;
     }
 
     .inside-project-paragraph, 
@@ -455,9 +551,11 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 2.8rem;
+        line-height: 3.8rem;
     }
 
     .inside-project-title2 {
@@ -466,13 +564,8 @@ body {
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
-        font-size: 3rem;
-    }
-
-    .container5-paragraph,
-    .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 3.6rem;
         margin-right: 8px;
     }
@@ -486,16 +579,20 @@ body {
 
     
     .inside-project-container,  .inside-project-container3 {
-        margin: 12rem 0 0 0;
+        margin: 18rem 0 0 0;
     }
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
-        gap: 3rem;
+        gap: 4rem;
     }
 
+    
+    .inside-project-page {
+        max-width: 1280px;
+    }
 }
 
 @media screen and (min-width: 1728px){
@@ -511,7 +608,7 @@ body {
     .View-Prototype {
         font-size: 1.8rem;
         height: 60px;
-        width: 220px;
+        width: 260px;
     }
 
     .inside-project-paragraph, 
@@ -520,14 +617,17 @@ body {
     .timeline-description-para-spec,
     .timeline-description-para-spec1,
     .timeline-description-para-spec2,
+    .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1 {
         font-size: 3rem;
+        line-height: 4rem;
     }
 
     .container5-paragraph,
     .sharepoint-container5-paragraph2,
-    .design-container5-paragraph {
+    .design-container5-paragraph,
+    .verification-container5-paragraph {
         font-size: 4.2rem;
         margin-right: 6px;
     }
@@ -544,17 +644,21 @@ body {
     }
 
     .inside-project-container,  .inside-project-container3 {
-        margin: 14rem 0 0 0;
-    }
-
-    body {
+        margin: 18rem 0 0 0;
         line-height: 400%;
     }
+
 
     .title-container, 
     .inside-project-container,
     .inside-project-container2,
     .inside-project-container6 {
         gap: 3rem;
+    }
+
+    
+    .inside-project-page {
+        max-width: 1280px;
+
     }
 }
